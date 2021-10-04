@@ -128,10 +128,10 @@ Experiment::Run (const WifiHelper &wifi, const YansWifiPhyHelper &wifiPhy,
   packetSocket.Install (c);
 
   YansWifiPhyHelper phy = wifiPhy;
-  phy.SetChannel (wifiChannel.Create ());
+  phy.SetChannel (wifiChannel.Create ()); //チャネルの設定
 
   WifiMacHelper mac = wifiMac;
-  NetDeviceContainer devices = wifi.Install (phy, mac, c);
+  NetDeviceContainer devices = wifi.Install (phy, mac, c); //netdeviceに(チャネル,モード、ノード達)を登録
 
   MobilityHelper mobility;
   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
@@ -174,13 +174,13 @@ int main (int argc, char *argv[])
 
   Experiment experiment;
   WifiHelper wifi;
-  wifi.SetStandard (WIFI_STANDARD_80211a);
-  WifiMacHelper wifiMac;
-  YansWifiPhyHelper wifiPhy;
-  YansWifiChannelHelper wifiChannel = YansWifiChannelHelper::Default ();
+  wifi.SetStandard (WIFI_STANDARD_80211a); //wifi規格の指定
+  WifiMacHelper wifiMac; //モードの指定に使用するインスタンスを生成
+  YansWifiPhyHelper wifiPhy; //チャンネルの指定に使用するインスタンスを生成(最終的にこのオブジェクトを突っ込む)
+  YansWifiChannelHelper wifiChannel = YansWifiChannelHelper::Default (); //チャンネルの受け皿を作成
   Gnuplot2dDataset dataset;
 
-  wifiMac.SetType ("ns3::AdhocWifiMac");
+  wifiMac.SetType ("ns3::AdhocWifiMac"); //アドホックモードを指定
 
   NS_LOG_DEBUG ("54");
   experiment = Experiment ("54mb");

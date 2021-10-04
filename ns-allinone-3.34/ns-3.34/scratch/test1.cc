@@ -19,6 +19,7 @@
 #include "ns3/internet-module.h"
 #include "ns3/point-to-point-module.h"
 #include "ns3/applications-module.h"
+#include "ns3/aodv-module.h"
 
 // Default Network Topology
 //
@@ -52,6 +53,9 @@ main (int argc, char *argv[])
   devices = pointToPoint.Install (nodes);
   //プロトコルスタックを乗せていく
   InternetStackHelper stack; //インターネットの設定
+
+  AodvHelper aodv;
+  stack.SetRoutingHelper(aodv);　//aodvルーティングプロトコルを乗せる場合
   stack.Install (nodes);   //ノードに適用
 
   Ipv4AddressHelper address;//IPアドレスの適用
@@ -59,7 +63,7 @@ main (int argc, char *argv[])
 
   Ipv4InterfaceContainer interfaces = address.Assign (devices); //ノード間に適用
   
-  //アプリケーションレベルの設定
+    //アプリケーションレベルの設定
   UdpEchoServerHelper echoServer (9);  //UDPのecho serverアプリ(引数はポート番号)
 
   ApplicationContainer serverApps = echoServer.Install (nodes.Get (1)); //Nodes1にサーバを適用
