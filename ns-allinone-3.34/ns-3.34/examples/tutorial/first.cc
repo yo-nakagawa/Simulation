@@ -46,7 +46,7 @@ main (int argc, char *argv[])
 
   PointToPointHelper pointToPoint; //p2pリンクの設定
   pointToPoint.SetDeviceAttribute ("DataRate", StringValue ("5Mbps")); //レート設定
-  pointToPoint.SetChannelAttribute ("Delay", StringValue ("2ms"));//p2pリンクを作成する際の感覚
+  pointToPoint.SetChannelAttribute ("Delay", StringValue ("2ms"));//p2pリンクを作成する際の間隔
 
   NetDeviceContainer devices; //上記の設定をノードに適用
   devices = pointToPoint.Install (nodes);
@@ -55,7 +55,7 @@ main (int argc, char *argv[])
   stack.Install (nodes);   //ノードに適用
 
   Ipv4AddressHelper address;//IPアドレスの適用
-  address.SetBase ("10.1.1.0", "255.255.255.0"); //10.1.1.0からスタート
+  address.SetBase ("10.1.1.0", "255.255.255.0"); //10.1.1.0からスタート(ノード0は10.1.1.1, ノード1は10.1.1.2)
 
   Ipv4InterfaceContainer interfaces = address.Assign (devices); //ノード間に適用
   
