@@ -1,21 +1,6 @@
 /* -*-  Mode: C++; c-file-style: "gnu"; indent-tabs-mode:nil; -*- */
 /*
- * Copyright (c) 2005,2006,2007 INRIA
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation;
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
- * Author: Mathieu Lacage <mathieu.lacage@sophia.inria.fr>
+ファイル出力はコレ！
  */
 
 #include "ns3/gnuplot.h"
@@ -182,103 +167,15 @@ int main (int argc, char *argv[])
 
   wifiMac.SetType ("ns3::AdhocWifiMac"); //アドホックモードを指定
 
-  NS_LOG_DEBUG ("54");
-  experiment = Experiment ("54mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate54Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset); //グラフに要素を追加
-
-  NS_LOG_DEBUG ("48");
-  experiment = Experiment ("48mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate48Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("36");
-  experiment = Experiment ("36mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate36Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("24");
-  experiment = Experiment ("24mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate24Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("18");
-  experiment = Experiment ("18mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate18Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("12");
-  experiment = Experiment ("12mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate12Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("9");
-  experiment = Experiment ("9mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate9Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("6");
-  experiment = Experiment ("6mb");
-  wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
-                                "DataMode", StringValue ("OfdmRate6Mbps"));
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  gnuplot.GenerateOutput (std::cout);
-
-  gnuplot = Gnuplot ("rate-control.png");
-
-  NS_LOG_DEBUG ("arf");
-  experiment = Experiment ("arf");
-  wifi.SetRemoteStationManager ("ns3::ArfWifiManager");
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("aarf");
-  experiment = Experiment ("aarf");
-  wifi.SetRemoteStationManager ("ns3::AarfWifiManager");
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("aarf-cd");
-  experiment = Experiment ("aarf-cd");
-  wifi.SetRemoteStationManager ("ns3::AarfcdWifiManager");
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("cara");
-  experiment = Experiment ("cara");
-  wifi.SetRemoteStationManager ("ns3::CaraWifiManager");
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
-  NS_LOG_DEBUG ("rraa");
-  experiment = Experiment ("rraa");
-  wifi.SetRemoteStationManager ("ns3::RraaWifiManager");
-  dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
-  gnuplot.AddDataset (dataset);
-
   NS_LOG_DEBUG ("ideal");
   experiment = Experiment ("ideal");
   wifi.SetRemoteStationManager ("ns3::IdealWifiManager");
   dataset = experiment.Run (wifi, wifiPhy, wifiMac, wifiChannel);
   gnuplot.AddDataset (dataset);
 
-  gnuplot.GenerateOutput (std::cout);
+  //ここからがファイル出力に関する処理
+  std::ofstream ofs("test.txt");
+  gnuplot.GenerateOutput (ofs);
 
   return 0;
 }

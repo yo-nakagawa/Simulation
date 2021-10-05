@@ -55,7 +55,7 @@ main (int argc, char *argv[])
   InternetStackHelper stack; //インターネットの設定
 
   AodvHelper aodv;
-  stack.SetRoutingHelper(aodv);　//aodvルーティングプロトコルを乗せる場合
+  stack.SetRoutingHelper(aodv);  //aodvルーティングプロトコルを乗せる場合
   stack.Install (nodes);   //ノードに適用
 
   Ipv4AddressHelper address;//IPアドレスの適用
