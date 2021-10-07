@@ -1,4 +1,4 @@
-/* -*-  Mode: C++; c-file-style: "gnu"; indent-tabs-mode:nil; -*- */
+/* -*-  Mode: C++; nodes-file-style: "gnu"; indent-tabs-mode:nil; -*- */
 /*
 お試し
 adhoc + random walk + tcp通信 
@@ -112,13 +112,13 @@ Experiment::Run (const WifiHelper &wifi, const YansWifiPhyHelper &wifiPhy,
   nodes.Create (5);
 
   PacketSocketHelper packetSocket;
-  packetSocket.Install (c);
+  packetSocket.Install (nodes);
 
   YansWifiPhyHelper phy = wifiPhy;
   phy.SetChannel (wifiChannel.Create ()); //チャネルの設定 (Createメソッドで新チャネルが返ってくる)
 
   WifiMacHelper mac = wifiMac;
-  NetDeviceContainer devices = wifi.Install (phy, mac, c); //netdeviceに(チャネル,モード、ノード達)を登録
+  NetDeviceContainer devices = wifi.Install (phy, mac, nodes); //netdeviceに(チャネル,モード、ノード達)を登録
 
   MobilityHelper mobility;
   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
@@ -127,7 +127,7 @@ Experiment::Run (const WifiHelper &wifi, const YansWifiPhyHelper &wifiPhy,
   mobility.SetPositionAllocator (positionAlloc);
   mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
 
-  mobility.Install (c);
+  mobility.Install (nodes);
 
   PacketSocketAddress socket;
   socket.SetSingleDevice (devices.Get (0)->GetIfIndex ()); //ノード0のインターフェイスIDをセット
@@ -138,12 +138,12 @@ Experiment::Run (const WifiHelper &wifi, const YansWifiPhyHelper &wifiPhy,
   onoff.SetConstantRate (DataRate (60000000));
   onoff.SetAttribute ("PacketSize", UintegerValue (2000));
 
-  ApplicationContainer apps = onoff.Install (c.Get (0));
+  ApplicationContainer apps = onoff.Install (nodes.Get (0));
   apps.Start (Seconds (0.5));
   apps.Stop (Seconds (250.0));
 
-  Simulator::Schedule (Seconds (1.5), &Experiment::AdvancePosition, this, c.Get (1));
-  Ptr<Socket> recvSink = SetupPacketReceive (c.Get (1));
+  Simulator::Schedule (Seconds (1.5), &Experiment::AdvancePosition, this, nodes.Get (1));
+  Ptr<Socket> recvSink = SetupPacketReceive (nodes.Get (1));
 
   Simulator::Run ();
 
