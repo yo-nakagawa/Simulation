@@ -61,8 +61,8 @@ void
 CalculateThroughput ()
 {
   Time now = Simulator::Now ();                                         /* Return the simulator's virtual time. */
-  double cur = (sink->GetTotalRx () - lastTotalRx) * (double) 8 / 1e5;     /* Convert Application RX Packets to MBits. */
-  std::cout << now.GetSeconds () << "s: \t" << cur << " Mbit/s" << std::endl;
+  //double cur = (sink->GetTotalRx () - lastTotalRx) * (double) 8 / 1e5;  /* Convert Application RX Packets to MBits. */
+  //std::cout << now.GetSeconds () << "s: \t" << cur << " Mbit/s" << std::endl;
   lastTotalRx = sink->GetTotalRx ();
   Simulator::Schedule (MilliSeconds (100), &CalculateThroughput);
 }
@@ -210,6 +210,6 @@ main (int argc, char *argv[])
       NS_LOG_ERROR ("Obtained throughput is not in the expected boundaries!");
       exit (1);
     }
-  std::cout << "\nAverage throughput: " << averageThroughput << " Mbit/s" << std::endl;
+  //std::cout << "\nAverage throughput: " << averageThroughput << " Mbit/s" << std::endl;
   return 0;
 }

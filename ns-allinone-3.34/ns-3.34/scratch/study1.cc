@@ -38,16 +38,24 @@ private:
   NodeContainer nodes;
   /// devices used in this simulation
   NetDeviceContainer devices;
+  /// interfaces used in this simulation
+  Ipv4InterfaceContainer interfaces;
+
 private:
   void ReceivePacket (Ptr<Socket> socket);
   void SetPosition (Ptr<Node> node, Vector position);
   Vector GetPosition (Ptr<Node> node);
   void AdvancePosition (Ptr<Node> node);
   Ptr<Socket> SetupPacketReceive (Ptr<Node> node);
+  
   /// Create the nodes
   void CreateNodes ();
   /// Create the devices
   void CreateDevices ();
+  /// Create the network
+  void InstallInternetStack ();
+  /// Create the simulation applications
+  void InstallApplications ();
 
   uint32_t m_bytesTotal;
   Gnuplot2dDataset m_output;
@@ -112,6 +120,7 @@ Experiment::SetupPacketReceive (Ptr<Node> node)
   sink->SetRecvCallback (MakeCallback (&Experiment::ReceivePacket, this));
   return sink;
 }
+
 void
 Experiment::CreateNodes ()
 {
@@ -132,6 +141,7 @@ Experiment::CreateNodes ()
 
   mobility.Install (nodes);
 }
+
 void
 Experiment::CreateDevices ()
 {
@@ -144,6 +154,36 @@ Experiment::CreateDevices ()
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager", "DataMode", StringValue ("OfdmRate6Mbps"), "RtsCtsThreshold", UintegerValue (0));
   devices = wifi.Install (wifiPhy, wifiMac, nodes); //設定をノードにインストール
 }
+
+void
+Experiment::InstallInternetStack ()
+{
+  AodvHelper aodv;
+  // you can configure AODV attributes here using aodv.Set(name, value)
+  InternetStackHelper stack;
+  stack.SetRoutingHelper (aodv); // has effect on the next Install ()
+  stack.Install (nodes);
+  Ipv4AddressHelper address; //IPv4の割当
+  address.SetBase ("10.0.0.0", "255.0.0.0");
+  interfaces = address.Assign (devices);
+}
+
+void
+AodvExample::InstallApplications ()
+{
+  V4PingHelper ping (interfaces.GetAddress (size - 1));//ここから、変更
+  ping.SetAttribute ("Verbose", BooleanValue (true));
+
+  ApplicationContainer p = ping.Install (nodes.Get (0));
+  p.Start (Seconds (0));
+  p.Stop (Seconds (totalTime) - Seconds (0.001));
+
+  // move node away
+  Ptr<Node> node = nodes.Get (size/2);
+  Ptr<MobilityModel> mob = node->GetObject<MobilityModel> ();
+  Simulator::Schedule (Seconds (totalTime/3), &MobilityModel::SetPosition, mob, Vector (1e5, 1e5, 1e5));
+}
+
 Gnuplot2dDataset
 Experiment::Run ()
 {
@@ -153,6 +193,7 @@ Experiment::Run ()
   
   CreateNodes();
   CreateDevices();
+  InstallInternetStack();
 //   PacketSocketHelper packetSocket;
 //   packetSocket.Install (nodes);
 //   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
