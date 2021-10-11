@@ -64,7 +64,7 @@ main (int argc, char *argv[])
   ApplicationContainer clientApps = echoClient.Install (nodes.Get (0));//Nodes0にクライアントを適用
   clientApps.Start (Seconds (2.0));//スタートする時間
   clientApps.Stop (Seconds (10.0));//終了する時間
-AnimationInterface anim (animFile);
+  AnimationInterface anim (animFile);
   Simulator::Run ();
   Simulator::Destroy ();
   return 0;
