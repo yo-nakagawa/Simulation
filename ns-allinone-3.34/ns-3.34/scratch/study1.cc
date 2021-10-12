@@ -3,7 +3,7 @@
 お試し
 adhoc + random walk + tcp通信 
  */
-
+#include "ns3/core-module.h"
 #include "ns3/gnuplot.h"
 #include "ns3/command-line.h"
 #include "ns3/config.h"
@@ -13,7 +13,6 @@ adhoc + random walk + tcp通信
 #include "ns3/yans-wifi-helper.h"
 #include "ns3/mobility-helper.h"
 #include "ns3/ipv4-address-helper.h"
-#include "ns3/on-off-helper.h"
 #include "ns3/yans-wifi-channel.h"
 #include "ns3/mobility-model.h"
 #include "ns3/packet-socket-helper.h"
@@ -21,6 +20,9 @@ adhoc + random walk + tcp通信
 #include "ns3/netanim-module.h"
 #include "ns3/aodv-module.h"
 #include "ns3/internet-module.h"
+#include "ns3/v4ping-helper.h"
+#include "ns3/on-off-helper.h"
+#include "ns3/packet-sink-helper.h"
 
 using namespace ns3;
 
@@ -40,6 +42,8 @@ private:
   NetDeviceContainer devices;
   /// interfaces used in this simulation
   Ipv4InterfaceContainer interfaces;
+
+  Ptr<Node> leaderNode;
 
 private:
   void ReceivePacket (Ptr<Socket> socket);
@@ -126,19 +130,36 @@ Experiment::CreateNodes ()
 {
 //ノードの作成
   nodes.Create (5);
-  Ptr<Node> leaderNode = nodes.Get (0);
+  leaderNode = nodes.Get (0);
   MobilityHelper mobility;
-  mobility.SetPositionAllocator ("ns3::RandomDiscPositionAllocator",
-                                 "X", StringValue ("50.0"),
-                                 "Y", StringValue ("50.0"),
-                                 "Rho", StringValue ("ns3::UniformRandomVariable[Min=0|Max=50]"));
+  // mobility.SetPositionAllocator ("ns3::RandomDiscPositionAllocator",
+  //                                "X", StringValue ("50.0"),
+  //                                "Y", StringValue ("50.0"),
+  //                                "Rho", StringValue ("ns3::UniformRandomVariable[Min=0|Max=50]"));
+  // mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
+  //                                "MinX", DoubleValue (0.0),
+  //                                "MinY", DoubleValue (0.0),
+  //                                "DeltaX", DoubleValue (5.0),
+  //                                "DeltaY", DoubleValue (10.0),
+  //                                "GridWidth", UintegerValue (20),
+  //                                "LayoutType", StringValue ("RowFirst"));
+  // mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
+  //                            "Mode", StringValue ("Time"),
+  //                            "Time", StringValue ("2s"),
+  //                            "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=3.0]"),
+  //                            "Bounds", StringValue ("0|200|0|200"));
+  mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
+                                 "MinX", DoubleValue (25.0),
+                                 "MinY", DoubleValue (25.0),
+                                 "DeltaX", DoubleValue (10.0),
+                                 "DeltaY", DoubleValue (10.0),
+                                 "GridWidth", UintegerValue (2),
+                                 "LayoutType", StringValue ("RowFirst"));
 
   mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
-                             "Mode", StringValue ("Time"),
-                             "Time", StringValue ("2s"),
+                               "Time", StringValue ("2s"),
                              "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=3.0]"),
-                             "Bounds", StringValue ("0|200|0|200"));
-
+                             "Bounds", RectangleValue (Rectangle (-100, 100, -100, 100)));
   mobility.Install (nodes);
 }
 
@@ -153,6 +174,8 @@ Experiment::CreateDevices ()
   WifiHelper wifi;
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager", "DataMode", StringValue ("OfdmRate6Mbps"), "RtsCtsThreshold", UintegerValue (0));
   devices = wifi.Install (wifiPhy, wifiMac, nodes); //設定をノードにインストール
+  wifiPhy.SetPcapDataLinkType (WifiPhyHelper::DLT_IEEE802_11_RADIO);
+  wifiPhy.EnablePcapAll ("study1"); //パケットキャプチャ
 }
 
 void
@@ -164,24 +187,46 @@ Experiment::InstallInternetStack ()
   stack.SetRoutingHelper (aodv); // has effect on the next Install ()
   stack.Install (nodes);
   Ipv4AddressHelper address; //IPv4の割当
-  address.SetBase ("10.0.0.0", "255.0.0.0");
+  address.SetBase ("10.0.0.0", "255.255.255.0");
   interfaces = address.Assign (devices);
 }
 
 void
-AodvExample::InstallApplications ()
+Experiment::InstallApplications ()
 {
-  V4PingHelper ping (interfaces.GetAddress (size - 1));//ここから、変更
+  /****ping****
+  V4PingHelper ping ("10.0.0.2");//ここから、変更
   ping.SetAttribute ("Verbose", BooleanValue (true));
+  ApplicationContainer apps = ping.Install (leaderNode);
+  apps.Start (Seconds (3.0));
+  apps.Stop (Seconds (8.0));  
+  */
 
-  ApplicationContainer p = ping.Install (nodes.Get (0));
-  p.Start (Seconds (0));
-  p.Stop (Seconds (totalTime) - Seconds (0.001));
+    /* Install TCP Receiver on the access point */
+  PacketSinkHelper sinkHelper ("ns3::TcpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), 9));
+  ApplicationContainer sinkApp = sinkHelper.Install (leaderNode);
+  sinkApp.Start (Seconds (3.0));
+  sinkApp.Stop (Seconds (8.0));
+  /* Install TCP/UDP Transmitter on the station */
+  OnOffHelper server ("ns3::TcpSocketFactory", Address ());
+  server.SetAttribute ("OnTime", StringValue ("ns3::ConstantRandomVariable[Constant=1]"));
+  server.SetAttribute ("OffTime", StringValue ("ns3::ConstantRandomVariable[Constant=0]"));
 
-  // move node away
-  Ptr<Node> node = nodes.Get (size/2);
-  Ptr<MobilityModel> mob = node->GetObject<MobilityModel> ();
-  Simulator::Schedule (Seconds (totalTime/3), &MobilityModel::SetPosition, mob, Vector (1e5, 1e5, 1e5));
+  
+
+  ApplicationContainer serverApps;
+  int nNodes = nodes.GetN();
+  for (int i = 1; i < nNodes ; ++i)
+  {
+    std::cout << interfaces.GetAddress (i) << std::endl;
+    AddressValue remoteAddress (InetSocketAddress (interfaces.GetAddress (0), 9));
+    server.SetAttribute ("Remote", remoteAddress);
+    serverApps.Add (server.Install (nodes.Get(i)));
+  }
+  serverApps.Start (Seconds (3.0));
+  serverApps.Stop (Seconds (8.0));
+  
+
 }
 
 Gnuplot2dDataset
@@ -194,39 +239,9 @@ Experiment::Run ()
   CreateNodes();
   CreateDevices();
   InstallInternetStack();
-//   PacketSocketHelper packetSocket;
-//   packetSocket.Install (nodes);
-//   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
-//   positionAlloc->Add (Vector (0.0, 0.0, 0.0));
-//   positionAlloc->Add (Vector (4.0, 0.0, 0.0));  
-//   mobility.SetPositionAllocator (positionAlloc);
+  InstallApplications();
 
-  
-//   AodvHelper aodv;
-//   // you can configure AODV attributes here using aodv.Set(name, value)
-//   InternetStackHelper stack;
-//   stack.SetRoutingHelper (aodv); // has effect on the next Install ()
-//   stack.Install (nodes);
-//   Ipv4AddressHelper address;
-//   address.SetBase ("10.0.0.0", "255.0.0.0");
-//   Ipv4InterfaceContainer interfaces = address.Assign (devices);
-
-//   PacketSocketAddress socket;
-//   socket.SetSingleDevice (devices.Get (0)->GetIfIndex ()); //ノード0のインターフェイスIDをセット
-//   socket.SetPhysicalAddress (devices.Get (1)->GetAddress ());//destiantion addressの設定
-//   socket.SetProtocol (1);
-
-//   OnOffHelper onoff ("ns3::PacketSocketFactory", Address (socket));
-//   onoff.SetConstantRate (DataRate (60000000));
-//   onoff.SetAttribute ("PacketSize", UintegerValue (2000));
-
-//   ApplicationContainer apps = onoff.Install (nodes.Get (0));
-//   apps.Start (Seconds (0.5));
-//   apps.Stop (Seconds (100.0));
-
-//   Simulator::Schedule (Seconds (1.5), &Experiment::AdvancePosition, this, nodes.Get (1));
-  //Ptr<Socket> recvSink = SetupPacketReceive (nodes.Get (1));
-  Simulator::Stop(Seconds (100.0));
+  Simulator::Stop(Seconds (10.0));
   AnimationInterface anim (animFile);
   Simulator::Run ();
 
