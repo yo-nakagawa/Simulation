@@ -42,8 +42,10 @@ private:
   NetDeviceContainer devices;
   /// interfaces used in this simulation
   Ipv4InterfaceContainer interfaces;
-
+  /// pointer to node
   Ptr<Node> leaderNode;
+  /// port number
+  int portNum;
 
 private:
   void ReceivePacket (Ptr<Socket> socket);
@@ -169,12 +171,16 @@ Experiment::CreateDevices ()
   WifiMacHelper wifiMac;
   wifiMac.SetType ("ns3::AdhocWifiMac"); //アドホックモードを指定
   YansWifiPhyHelper wifiPhy;
-  YansWifiChannelHelper wifiChannel = YansWifiChannelHelper::Default ();
+  //YansWifiChannelHelper wifiChannel = YansWifiChannelHelper::Default ();
+  YansWifiChannelHelper wifiChannel;
+  wifiChannel.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
+  wifiChannel.AddPropagationLoss ("ns3::RangePropagationLossModel",
+                                  "MaxRange", DoubleValue (13.0)); //wifiの距離
   wifiPhy.SetChannel (wifiChannel.Create ()); //チャネルの設定 (Createメソッドで新チャネルが返ってくる)
   WifiHelper wifi;
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager", "DataMode", StringValue ("OfdmRate6Mbps"), "RtsCtsThreshold", UintegerValue (0));
   devices = wifi.Install (wifiPhy, wifiMac, nodes); //設定をノードにインストール
-  wifiPhy.SetPcapDataLinkType (WifiPhyHelper::DLT_IEEE802_11_RADIO);
+  wifiPhy.SetPcapDataLinkType (WifiPhyHelper::DLT_IEEE802_11_RADIO);//パケットキャプチャ
   wifiPhy.EnablePcapAll ("study1"); //パケットキャプチャ
 }
 
@@ -203,23 +209,23 @@ Experiment::InstallApplications ()
   */
 
     /* Install TCP Receiver on the access point */
-  PacketSinkHelper sinkHelper ("ns3::TcpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), 9));
+  portNum = 50000;
+  PacketSinkHelper sinkHelper ("ns3::TcpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), portNum));
   ApplicationContainer sinkApp = sinkHelper.Install (leaderNode);
   sinkApp.Start (Seconds (3.0));
   sinkApp.Stop (Seconds (8.0));
+
+
   /* Install TCP/UDP Transmitter on the station */
   OnOffHelper server ("ns3::TcpSocketFactory", Address ());
-  server.SetAttribute ("OnTime", StringValue ("ns3::ConstantRandomVariable[Constant=1]"));
-  server.SetAttribute ("OffTime", StringValue ("ns3::ConstantRandomVariable[Constant=0]"));
-
-  
-
+  server.SetConstantRate(DataRate(5000)); //bps
+  // server.SetAttribute ("OnTime", StringValue ("ns3::ConstantRandomVariable[Constant=1]"));
+  // server.SetAttribute ("OffTime", StringValue ("ns3::ConstantRandomVariable[Constant=0]"));
   ApplicationContainer serverApps;
   int nNodes = nodes.GetN();
   for (int i = 1; i < nNodes ; ++i)
   {
-    std::cout << interfaces.GetAddress (i) << std::endl;
-    AddressValue remoteAddress (InetSocketAddress (interfaces.GetAddress (0), 9));
+    AddressValue remoteAddress (InetSocketAddress (interfaces.GetAddress (0), portNum));
     server.SetAttribute ("Remote", remoteAddress);
     serverApps.Add (server.Install (nodes.Get(i)));
   }
