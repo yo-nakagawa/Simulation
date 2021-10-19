@@ -28,6 +28,8 @@
 #include "udp-echo-client.h"
 #include "udp-echo-helper.h"
 #include "udp-echo-server.h"
+#include "udp-ndn-helper.h"
+#include "udp-ndn-server.h"
 #include "udp-server.h"
 #include "udp-trace-client.h"
 #endif

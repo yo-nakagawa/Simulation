@@ -3401,12 +3401,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/fd-net-device/helper/encode-decode.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/encode-decode.cc.5.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/encode-decode.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/encode-decode.cc.5.o",
     "file": "../src/fd-net-device/helper/encode-decode.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/fd-net-device/helper/creator-utils.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/creator-utils.cc.5.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/creator-utils.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/creator-utils.cc.5.o",
     "file": "../src/fd-net-device/helper/creator-utils.cc"
   },
   {
@@ -5331,7 +5331,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/tap-bridge/model/tap-encode-decode.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/tap-bridge/model/tap-encode-decode.cc.4.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/tap-bridge/model/tap-encode-decode.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/tap-bridge/model/tap-encode-decode.cc.4.o",
     "file": "../src/tap-bridge/model/tap-encode-decode.cc"
   },
   {
@@ -6096,7 +6096,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/subdir/scratch-simulator-subdir.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/subdir/scratch-simulator-subdir.cc.7.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/subdir/scratch-simulator-subdir.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/subdir/scratch-simulator-subdir.cc.8.o",
     "file": "../scratch/subdir/scratch-simulator-subdir.cc"
   },
   {
@@ -6121,17 +6121,17 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/fd-net-device/helper/tap-device-creator.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/tap-device-creator.cc.4.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/tap-device-creator.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/tap-device-creator.cc.4.o",
     "file": "../src/fd-net-device/helper/tap-device-creator.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/fd-net-device/helper/raw-sock-creator.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/raw-sock-creator.cc.5.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/fd-net-device/helper/raw-sock-creator.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/fd-net-device/helper/raw-sock-creator.cc.5.o",
     "file": "../src/fd-net-device/helper/raw-sock-creator.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/tap-bridge/model/tap-creator.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/tap-bridge/model/tap-creator.cc.4.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/tap-bridge/model/tap-creator.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/tap-bridge/model/tap-creator.cc.4.o",
     "file": "../src/tap-bridge/model/tap-creator.cc"
   },
   {
@@ -6141,17 +6141,17 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test2.cc.8.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test2.cc.9.o",
     "file": "../scratch/test2.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/study1.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study1.cc.4.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/study1.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study1.cc.5.o",
     "file": "../scratch/study1.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.9.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.10.o",
     "file": "../scratch/test3.cc"
   },
   {
@@ -6176,17 +6176,37 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/mythird.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/mythird.cc.6.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/mythird.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/mythird.cc.7.o",
     "file": "../scratch/mythird.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/mystar.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/mystar.cc.5.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/mystar.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/mystar.cc.6.o",
     "file": "../scratch/mystar.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
     "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/mywifitcp.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/mywifitcp.cc.2.o",
     "file": "../scratch/mywifitcp.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/study2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study2.cc.3.o",
+    "file": "../scratch/study2.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myudp.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myudp.cc.5.o",
+    "file": "../scratch/myudp.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-ndn-server.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/model/udp-ndn-server.cc.1.o",
+    "file": "../src/applications/model/udp-ndn-server.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/applications/helper/udp-ndn-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/helper/udp-ndn-helper.cc.1.o",
+    "file": "../src/applications/helper/udp-ndn-helper.cc"
   }
 ]
