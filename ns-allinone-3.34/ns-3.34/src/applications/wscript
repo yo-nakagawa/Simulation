@@ -21,6 +21,7 @@ def build(bld):
         'model/three-gpp-http-header.cc',
         'model/three-gpp-http-variables.cc',
         'model/udp-ndn-server.cc',            #ADD
+        'model/ndn-packet.cc',                #ADD
         'helper/bulk-send-helper.cc',
         'helper/on-off-helper.cc',
         'helper/packet-sink-helper.cc',
@@ -64,6 +65,7 @@ def build(bld):
         'model/three-gpp-http-header.h',
         'model/three-gpp-http-variables.h',
         'model/udp-ndn-server.h',                    #ADD
+        'model/ndn-packet.h',                    #ADD
         'helper/bulk-send-helper.h',
         'helper/on-off-helper.h',
         'helper/packet-sink-helper.h',

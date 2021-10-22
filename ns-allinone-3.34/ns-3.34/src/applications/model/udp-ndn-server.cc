@@ -29,8 +29,12 @@
 #include "ns3/socket-factory.h"
 #include "ns3/packet.h"
 #include "ns3/uinteger.h"
-
+#include "ns3/ipv4-header.h"
+#include "ns3/udp-header.h"
 #include "udp-ndn-server.h"
+#include <map>
+#include "ndn-packet.h"
+#include "/home/nuc1/Simulation/cereal-1.3.0/include/cereal/archives/json.hpp"
 namespace ns3 {
 
 NS_LOG_COMPONENT_DEFINE ("UdpNdnServerApplication");
@@ -157,46 +161,62 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket)
   NS_LOG_FUNCTION (this << socket);
 
   Ptr<Packet> packet;
-  Address from;
+  Ptr<Packet> dataPacket;
+  uint32_t dataSize;
+  uint8_t *data;
+  Address from;          //送信元IPアドレス
   Address localAddress;
+  contents["/Osaka/weather"] = "Sunny";
   while ((packet = socket->RecvFrom (from)))
+  {
+    data = 0;
+    dataSize = 0;
+    uint8_t *buffer = new uint8_t[packet->GetSize()];
+    packet->CopyData(buffer, packet->GetSize());           //ペイロードをコピー
+    std::string s = std::string(buffer, buffer + packet->GetSize() - 1);
+    std::cout << "Received:" << s << std::endl;
+    
+    packet->RemoveAllPacketTags ();
+    packet->RemoveAllByteTags ();
+
+    NdnPacket np ("aaa", 1, "bbb");
+    std::cout << np.GetName() << std::endl; 
+
+    std::stringstream ss;
     {
-      socket->GetSockName (localAddress);
-      
-      m_rxTrace (packet);
-      m_rxTraceWithAddresses (packet, from, localAddress);
-      if (InetSocketAddress::IsMatchingType (from))
-        {
-          NS_LOG_INFO ("At time " << Simulator::Now ().As (Time::S) << " server received " << packet->GetSize () << " bytes from " <<
-                       InetSocketAddress::ConvertFrom (from).GetIpv4 () << " port " <<
-                       InetSocketAddress::ConvertFrom (from).GetPort ());
-        }
-      else if (Inet6SocketAddress::IsMatchingType (from))
-        {
-          NS_LOG_INFO ("At time " << Simulator::Now ().As (Time::S) << " server received " << packet->GetSize () << " bytes from " <<
-                       Inet6SocketAddress::ConvertFrom (from).GetIpv6 () << " port " <<
-                       Inet6SocketAddress::ConvertFrom (from).GetPort ());
-        }
+        cereal::JSONOutputArchive o_archive(ss);
+        o_archive(np);
+    }
+    std::cout << ss.str() << std::endl;
 
-      packet->RemoveAllPacketTags ();
-      std::cout << from << std::endl;
-      packet->RemoveAllByteTags ();
+    NdnPacket np_i ("0", 0, "0");
+    cereal::JSONInputArchive i_archive(ss);
+    i_archive(np_i);
 
-      NS_LOG_LOGIC ("Echoing packet");
-      socket->SendTo (packet, 0, from);
+    std::cout << np_i.GetName() << std::endl;
 
-      if (InetSocketAddress::IsMatchingType (from))
-        {
-          NS_LOG_INFO ("At time " << Simulator::Now ().As (Time::S) << " server sent " << packet->GetSize () << " bytes to " <<
-                       InetSocketAddress::ConvertFrom (from).GetIpv4 () << " port " <<
-                       InetSocketAddress::ConvertFrom (from).GetPort ());
-        }
-      else if (Inet6SocketAddress::IsMatchingType (from))
-        {
-          NS_LOG_INFO ("At time " << Simulator::Now ().As (Time::S) << " server sent " << packet->GetSize () << " bytes to " <<
-                       Inet6SocketAddress::ConvertFrom (from).GetIpv6 () << " port " <<
-                       Inet6SocketAddress::ConvertFrom (from).GetPort ());
-        }
+
+
+
+
+
+
+    //データがあれば
+    if(contents.count(s) != 0){
+      // dataSize = contents[s].size () + 1;
+      // delete [] data;
+      // data = new uint8_t [dataSize];
+      dataSize = s.size() + 1 + contents[s].size () + 1;
+      delete [] data;
+      data = new uint8_t [dataSize];
+      std::string payload = s + ":" + contents[s];
+      std:: cout << payload << std::endl;
+      memcpy (data, payload.c_str (), dataSize);
+      dataPacket = Create<Packet>(data, dataSize);
+      socket->SendTo(dataPacket, 0, from); //送信部分(destination addressを指定)
+    } 
+    //Dataパケットを返信
+    //socket->SendTo (packet, 0, from); //送信部分(destination addressを指定)
     }
 }
 

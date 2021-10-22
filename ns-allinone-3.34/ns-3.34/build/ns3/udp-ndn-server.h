@@ -24,6 +24,7 @@
 #include "ns3/ptr.h"
 #include "ns3/address.h"
 #include "ns3/traced-callback.h"
+#include <map>
 
 namespace ns3 {
 
@@ -79,6 +80,8 @@ private:
 
   /// Callbacks for tracing the packet Rx events, includes source and destination addresses
   TracedCallback<Ptr<const Packet>, const Address &, const Address &> m_rxTraceWithAddresses;
+  /// 保持するコンテンツ
+  std::map<std::string, std::string> contents;
 };
 
 } // namespace ns3

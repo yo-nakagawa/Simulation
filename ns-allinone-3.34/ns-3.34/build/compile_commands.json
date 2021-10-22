@@ -2826,7 +2826,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/applications/model/udp-echo-client.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/model/udp-echo-client.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-echo-client.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/model/udp-echo-client.cc.1.o",
     "file": "../src/applications/model/udp-echo-client.cc"
   },
   {
@@ -6096,7 +6096,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/subdir/scratch-simulator-subdir.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/subdir/scratch-simulator-subdir.cc.8.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/subdir/scratch-simulator-subdir.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/subdir/scratch-simulator-subdir.cc.7.o",
     "file": "../scratch/subdir/scratch-simulator-subdir.cc"
   },
   {
@@ -6136,12 +6136,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test1.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test1.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test1.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test1.cc.1.o",
     "file": "../scratch/test1.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test2.cc.9.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test2.cc.8.o",
     "file": "../scratch/test2.cc"
   },
   {
@@ -6151,7 +6151,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.10.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.8.o",
     "file": "../scratch/test3.cc"
   },
   {
@@ -6191,7 +6191,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/study2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study2.cc.3.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/study2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study2.cc.3.o",
     "file": "../scratch/study2.cc"
   },
   {
@@ -6206,7 +6206,17 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/applications/helper/udp-ndn-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/helper/udp-ndn-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/helper/udp-ndn-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/helper/udp-ndn-helper.cc.1.o",
     "file": "../src/applications/helper/udp-ndn-helper.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myudp0.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myudp0.cc.5.o",
+    "file": "../scratch/myudp0.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/ndn-packet.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/model/ndn-packet.cc.1.o",
+    "file": "../src/applications/model/ndn-packet.cc"
   }
 ]

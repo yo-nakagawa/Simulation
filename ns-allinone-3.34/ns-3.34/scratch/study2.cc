@@ -185,10 +185,10 @@ Experiment::InstallApplications ()
 
     /* Install UDP Receiver on the access point */
   portNum = 50000;
-  PacketSinkHelper sinkHelper ("ns3::UdpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), portNum));
-  ApplicationContainer sinkApp = sinkHelper.Install (leaderNode);
-  sinkApp.Start (Seconds (3.0));
-  sinkApp.Stop (Seconds (8.0));
+  UdpNdnServerHelper server (portNum);
+  ApplicationContainer serverapps = server.Install (leaderNode);
+  serverapps.Start (Seconds (3.0));
+  serverapps.Stop (Seconds (8.0));
 
 
   /* Install UDP Transmitter on the station */
@@ -206,7 +206,7 @@ Experiment::InstallApplications ()
     
     apps.Add (client.Install (nodes.Get(i)));
   }
-  client.SetFill (apps.Get (0), "Hello World");
+  client.SetFill (apps.Get (0), "/Osaka/weather");
   apps.Start (Seconds (3.0));
   apps.Stop (Seconds (8.0));
   

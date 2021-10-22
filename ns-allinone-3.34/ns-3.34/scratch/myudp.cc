@@ -128,9 +128,9 @@ main (int argc, char *argv[])
 // Users may find it convenient to initialize echo packets with actual data;
 // the below lines suggest how to do this
 //
-  client.SetFill (apps.Get (0), "Hello World");
+  client.SetFill (apps.Get (0), "/Osaka/weather");
 
-  //client.SetFill (apps.Get (0), 0xa5, 1024);
+  //client.SetFill (apps.Get (0), 0xa5, 1024);  //0xa5を
 
   //uint8_t fill[] = { 0, 1, 2, 3, 4, 5, 6};
   //client.SetFill (apps.Get (0), fill, sizeof(fill), 1024);
