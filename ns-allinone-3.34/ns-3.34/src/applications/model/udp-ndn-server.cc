@@ -134,8 +134,22 @@ UdpNdnServer::StartApplication (void)
         }
     }
 
-  m_socket->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this));
+  m_socket->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this)); //パケットを受信したら、こいつが呼ばれる
   m_socket6->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this));
+  Simulator::Schedule (Seconds(0.), &UdpNdnServer::Send, this);
+  void 
+UdpEchoClient::Send (void)
+{
+        NdnPacket snp ("/Osaka/weather", 0, "");
+        std::stringstream sss;                         //送信するパケット用
+        {
+            cereal::JSONOutputArchive o_archive(sss);
+            o_archive(snp);
+        }      
+        uint16_t packetSize = snp.str().length();
+        Ptr<Packet> dataPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize);
+        socket->SendTo(dataPacket, 0, from);      //ソースとデスティネーションひっくり返して送る
+
 }
 
 void 
@@ -156,7 +170,7 @@ UdpNdnServer::StopApplication ()
 }
 
 void 
-UdpNdnServer::HandleRead (Ptr<Socket> socket)
+UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
 {
   NS_LOG_FUNCTION (this << socket);
 
@@ -173,12 +187,39 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket)
     dataSize = 0;
     uint8_t *buffer = new uint8_t[packet->GetSize()];
     packet->CopyData(buffer, packet->GetSize());           //ペイロードをコピー
-    std::string s = std::string(buffer, buffer + packet->GetSize() - 1);
-    std::cout << "Received:" << s << std::endl;
+    str::stringstream rss;
+    rss << buffer;                                         //buffer内容をssにロード
+    NdnPacket rnp ("0", 0, "0");                         //オブジェクト生成
+    cereal::JSONInputArchive i_archive(rss);               //デシリアライズ 
+    i_archive(rnp);                                      //オブジェクトにオーバーロード
+    std::string receivedPacketName = rnp.GetName();
+
+    if(rnp.GetTypeId() == 0)
+    {
+      std::cout << "Received Interest: name = " << receivedPacketName << std::endl;
+      if(contents.count(receivedPacketName) != 0){
+        NdnPacket snp (receivedPacketName, 1, contents[receivedPacketName]);
+        std::stringstream sss;                         //送信するパケット用
+        {
+            cereal::JSONOutputArchive o_archive(sss);
+            o_archive(snp);
+        }      
+        uint16_t packetSize = snp.str().length();
+        Ptr<Packet> dataPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize);
+        socket->SendTo(dataPacket, 0, from);      //ソースとデスティネーションひっくり返して送る
+      } 
+    }
+    else
+    {
+      std::cout << "Received Data:" << rnp.GetContent()<< std::endl;
+
+    }
+    
     
     packet->RemoveAllPacketTags ();
     packet->RemoveAllByteTags ();
 
+  #if 0
     NdnPacket np ("aaa", 1, "bbb");
     std::cout << np.GetName() << std::endl; 
 
@@ -195,7 +236,9 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket)
 
     std::cout << np_i.GetName() << std::endl;
 
-
+    uint16_t packetSize = ss.str().length();
+    Ptr<Packet> packeto = Create<Packet>((uint8_t *)ss.str().c_str(), packetSize);
+    socket->SendTo(packeto, 0, from);
 
 
 
@@ -206,6 +249,7 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket)
       // dataSize = contents[s].size () + 1;
       // delete [] data;
       // data = new uint8_t [dataSize];
+
       dataSize = s.size() + 1 + contents[s].size () + 1;
       delete [] data;
       data = new uint8_t [dataSize];
@@ -213,11 +257,12 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket)
       std:: cout << payload << std::endl;
       memcpy (data, payload.c_str (), dataSize);
       dataPacket = Create<Packet>(data, dataSize);
-      socket->SendTo(dataPacket, 0, from); //送信部分(destination addressを指定)
+      // socket->SendTo(dataPacket, 0, from); //送信部分(destination addressを指定)
     } 
     //Dataパケットを返信
     //socket->SendTo (packet, 0, from); //送信部分(destination addressを指定)
     }
+  #endif
 }
 
 } // Namespace ns3
