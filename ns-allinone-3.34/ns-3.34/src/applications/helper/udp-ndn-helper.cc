@@ -18,7 +18,7 @@
  * Author: Mathieu Lacage <mathieu.lacage@sophia.inria.fr>
  */
 #include "udp-ndn-helper.h"
-#include "ns3/udp-ndn-server.h"
+#include "ns3/udp-ndn.h"
 #include "ns3/uinteger.h"
 #include "ns3/names.h"
 

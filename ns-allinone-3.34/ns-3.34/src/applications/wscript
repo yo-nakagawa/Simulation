@@ -20,7 +20,7 @@ def build(bld):
         'model/three-gpp-http-server.cc',
         'model/three-gpp-http-header.cc',
         'model/three-gpp-http-variables.cc',
-        'model/udp-ndn-server.cc',            #ADD
+        'model/udp-ndn.cc',                   #ADD
         'model/ndn-packet.cc',                #ADD
         'helper/bulk-send-helper.cc',
         'helper/on-off-helper.cc',
@@ -64,7 +64,7 @@ def build(bld):
         'model/three-gpp-http-server.h',
         'model/three-gpp-http-header.h',
         'model/three-gpp-http-variables.h',
-        'model/udp-ndn-server.h',                    #ADD
+        'model/udp-ndn.h',                    #ADD
         'model/ndn-packet.h',                    #ADD
         'helper/bulk-send-helper.h',
         'helper/on-off-helper.h',
