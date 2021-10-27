@@ -62,7 +62,7 @@ main (int argc, char *argv[])
 //
   NS_LOG_INFO ("Create nodes.");
   NodeContainer n;
-  n.Create (4);
+  n.Create (2);
 
   InternetStackHelper internet;
   internet.Install (n);
@@ -102,7 +102,7 @@ main (int argc, char *argv[])
 //
   uint16_t port = 50000;  // well-known echo port number
   UdpNdnServerHelper server (port);
-  ApplicationContainer apps = server.Install (n.Get (1));
+  ApplicationContainer apps = server.Install (n);
   // PacketSinkHelper packetSinkHelper ("ns3::UdpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), port));
   // ApplicationContainer apps = packetSinkHelper.Install (n.Get (1));
   apps.Start (Seconds (1.0));
@@ -112,18 +112,18 @@ main (int argc, char *argv[])
 // Create a UdpEchoClient application to send UDP datagrams from node zero to
 // node one.
 //
-  uint32_t packetSize = 1024;
-  uint32_t maxPacketCount = 1;
-  Time interPacketInterval = Seconds (1.);
-  UdpEchoClientHelper client (serverAddress, port);
-  client.SetAttribute ("MaxPackets", UintegerValue (maxPacketCount));
-  client.SetAttribute ("Interval", TimeValue (interPacketInterval));
-  client.SetAttribute ("PacketSize", UintegerValue (packetSize));
-  apps = client.Install (n.Get (0));
-  apps.Start (Seconds (2.0));
-  apps.Stop (Seconds (10.0));
+  // uint32_t packetSize = 1024;
+  // uint32_t maxPacketCount = 1;
+  // Time interPacketInterval = Seconds (1.);
+  // UdpEchoClientHelper client (serverAddress, port);
+  // client.SetAttribute ("MaxPackets", UintegerValue (maxPacketCount));
+  // client.SetAttribute ("Interval", TimeValue (interPacketInterval));
+  // client.SetAttribute ("PacketSize", UintegerValue (packetSize));
+  // apps = client.Install (n.Get (0));
+  // apps.Start (Seconds (2.0));
+  // apps.Stop (Seconds (10.0));
 
-#if 1
+#if 0
 //
 // Users may find it convenient to initialize echo packets with actual data;
 // the below lines suggest how to do this

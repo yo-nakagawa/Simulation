@@ -68,11 +68,12 @@ private:
    *
    * \param socket the socket the packet was received to.
    */
+  void Send(void);
   void HandleRead (Ptr<Socket> socket);
 
   uint16_t m_port; //!< Port on which we listen for incoming packets.
-  Ptr<Socket> m_socket; //!< IPv4 Socket
-  Ptr<Socket> m_socket6; //!< IPv6 Socket
+  Ptr<Socket> m_serverSocket; //!< IPv4 Socket
+  Ptr<Socket> m_clientSocket;
   Address m_local; //!< local multicast address
 
   /// Callbacks for tracing the packet Rx events

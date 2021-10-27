@@ -70,8 +70,8 @@ UdpNdnServer::UdpNdnServer ()
 UdpNdnServer::~UdpNdnServer()
 {
   NS_LOG_FUNCTION (this);
-  m_socket = 0;
-  m_socket6 = 0;
+  m_serverSocket = 0;
+  m_clientSocket = 0;
 }
 
 void
@@ -86,70 +86,39 @@ UdpNdnServer::StartApplication (void)
 {
   NS_LOG_FUNCTION (this);
 
-  if (m_socket == 0)
+  if (m_serverSocket == 0)
     {
       TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
-      m_socket = Socket::CreateSocket (GetNode (), tid);
+      m_serverSocket = Socket::CreateSocket (GetNode (), tid);
       InetSocketAddress local = InetSocketAddress (Ipv4Address::GetAny (), m_port);
-      if (m_socket->Bind (local) == -1)
+      if (m_serverSocket->Bind (local) == -1)
         {
           NS_FATAL_ERROR ("Failed to bind socket");
         }
-      if (addressUtils::IsMulticast (m_local))
-        {
-          Ptr<UdpSocket> udpSocket = DynamicCast<UdpSocket> (m_socket);
-          if (udpSocket)
-            {
-              // equivalent to setsockopt (MCAST_JOIN_GROUP)
-              udpSocket->MulticastJoinGroup (0, m_local);
-            }
-          else
-            {
-              NS_FATAL_ERROR ("Error: Failed to join multicast group");
-            }
-        }
     }
 
-  if (m_socket6 == 0)
-    {
-      TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
-      m_socket6 = Socket::CreateSocket (GetNode (), tid);
-      Inet6SocketAddress local6 = Inet6SocketAddress (Ipv6Address::GetAny (), m_port);
-      if (m_socket6->Bind (local6) == -1)
-        {
-          NS_FATAL_ERROR ("Failed to bind socket");
-        }
-      if (addressUtils::IsMulticast (local6))
-        {
-          Ptr<UdpSocket> udpSocket = DynamicCast<UdpSocket> (m_socket6);
-          if (udpSocket)
-            {
-              // equivalent to setsockopt (MCAST_JOIN_GROUP)
-              udpSocket->MulticastJoinGroup (0, local6);
-            }
-          else
-            {
-              NS_FATAL_ERROR ("Error: Failed to join multicast group");
-            }
-        }
-    }
-
-  m_socket->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this)); //パケットを受信したら、こいつが呼ばれる
-  m_socket6->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this));
+  m_serverSocket->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this)); //パケットを受信したら、こいつが呼ばれる
   Simulator::Schedule (Seconds(0.), &UdpNdnServer::Send, this);
-  void 
-UdpEchoClient::Send (void)
+}
+void 
+UdpNdnServer::Send (void)
 {
-        NdnPacket snp ("/Osaka/weather", 0, "");
-        std::stringstream sss;                         //送信するパケット用
-        {
-            cereal::JSONOutputArchive o_archive(sss);
-            o_archive(snp);
-        }      
-        uint16_t packetSize = snp.str().length();
-        Ptr<Packet> dataPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize);
-        socket->SendTo(dataPacket, 0, from);      //ソースとデスティネーションひっくり返して送る
+  std::cout << "Send" << std::endl;
 
+  TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
+  m_clientSocket = Socket::CreateSocket (GetNode (), tid); //socketの生成
+  Ipv4Address ad ("10.1.1.1");                              // Address型に変換
+  InetSocketAddress local = InetSocketAddress (ad, m_port); //IP+port でソケットアドレス生成
+
+  NdnPacket snp ("/Osaka/weather", 0, "");
+  std::stringstream sss;                         //送信するパケット用
+  {
+      cereal::JSONOutputArchive o_archive(sss);
+      o_archive(snp);
+  }      
+  uint16_t packetSize = sss.str().length();
+  Ptr<Packet>interestPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize);
+  m_clientSocket->SendTo(interestPacket, 1, local);
 }
 
 void 
@@ -157,16 +126,16 @@ UdpNdnServer::StopApplication ()
 {
   NS_LOG_FUNCTION (this);
 
-  if (m_socket != 0) 
+  if (m_clientSocket != 0) 
     {
-      m_socket->Close ();
-      m_socket->SetRecvCallback (MakeNullCallback<void, Ptr<Socket> > ());
+      m_clientSocket->Close ();
+      m_clientSocket->SetRecvCallback (MakeNullCallback<void, Ptr<Socket> > ());
     }
-  if (m_socket6 != 0) 
-    {
-      m_socket6->Close ();
-      m_socket6->SetRecvCallback (MakeNullCallback<void, Ptr<Socket> > ());
-    }
+  if (m_serverSocket != 0) 
+  {
+    m_serverSocket->Close ();
+    m_serverSocket->SetRecvCallback (MakeNullCallback<void, Ptr<Socket> > ());
+  }
 }
 
 void 
@@ -176,18 +145,15 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
 
   Ptr<Packet> packet;
   Ptr<Packet> dataPacket;
-  uint32_t dataSize;
-  uint8_t *data;
   Address from;          //送信元IPアドレス
   Address localAddress;
   contents["/Osaka/weather"] = "Sunny";
+  std::cout << "okokokokokokok" << std::endl;
   while ((packet = socket->RecvFrom (from)))
   {
-    data = 0;
-    dataSize = 0;
     uint8_t *buffer = new uint8_t[packet->GetSize()];
     packet->CopyData(buffer, packet->GetSize());           //ペイロードをコピー
-    str::stringstream rss;
+    std::stringstream rss;
     rss << buffer;                                         //buffer内容をssにロード
     NdnPacket rnp ("0", 0, "0");                         //オブジェクト生成
     cereal::JSONInputArchive i_archive(rss);               //デシリアライズ 
@@ -204,7 +170,7 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
             cereal::JSONOutputArchive o_archive(sss);
             o_archive(snp);
         }      
-        uint16_t packetSize = snp.str().length();
+        uint16_t packetSize = sss.str().length();
         Ptr<Packet> dataPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize);
         socket->SendTo(dataPacket, 0, from);      //ソースとデスティネーションひっくり返して送る
       } 
@@ -219,7 +185,7 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
     packet->RemoveAllPacketTags ();
     packet->RemoveAllByteTags ();
 
-  #if 0
+#if 0 
     NdnPacket np ("aaa", 1, "bbb");
     std::cout << np.GetName() << std::endl; 
 
@@ -238,11 +204,12 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
 
     uint16_t packetSize = ss.str().length();
     Ptr<Packet> packeto = Create<Packet>((uint8_t *)ss.str().c_str(), packetSize);
+    std::cout << from << std::endl;
     socket->SendTo(packeto, 0, from);
+#endif 
 
 
-
-
+#if 0
 
     //データがあれば
     if(contents.count(s) != 0){
@@ -260,9 +227,9 @@ UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
       // socket->SendTo(dataPacket, 0, from); //送信部分(destination addressを指定)
     } 
     //Dataパケットを返信
-    //socket->SendTo (packet, 0, from); //送信部分(destination addressを指定)
-    }
+    //socket->SendTo (packet, 0, from); //送信部分(destination addressを指定
   #endif
+  }
 }
 
 } // Namespace ns3

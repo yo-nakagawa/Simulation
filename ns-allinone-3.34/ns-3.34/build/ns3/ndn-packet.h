@@ -42,7 +42,7 @@ public:
   }
 private:
     std::string m_name;
-    int m_typeId;
+    int m_typeId;             //0:Interest, 1:Data
     std::string m_content;
 };
 
