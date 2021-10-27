@@ -24,14 +24,14 @@
 
 namespace ns3 {
 
-UdpNdnServerHelper::UdpNdnServerHelper (uint16_t port)
+UdpNdnHelper::UdpNdnHelper (uint16_t port)
 {
-  m_factory.SetTypeId (UdpNdnServer::GetTypeId ());
+  m_factory.SetTypeId (UdpNdn::GetTypeId ());
   SetAttribute ("Port", UintegerValue (port));
 }
 
 void 
-UdpNdnServerHelper::SetAttribute (
+UdpNdnHelper::SetAttribute (
   std::string name, 
   const AttributeValue &value)
 {
@@ -39,20 +39,20 @@ UdpNdnServerHelper::SetAttribute (
 }
 
 ApplicationContainer
-UdpNdnServerHelper::Install (Ptr<Node> node) const
+UdpNdnHelper::Install (Ptr<Node> node) const
 {
   return ApplicationContainer (InstallPriv (node));
 }
 
 ApplicationContainer
-UdpNdnServerHelper::Install (std::string nodeName) const
+UdpNdnHelper::Install (std::string nodeName) const
 {
   Ptr<Node> node = Names::Find<Node> (nodeName);
   return ApplicationContainer (InstallPriv (node));
 }
 
 ApplicationContainer
-UdpNdnServerHelper::Install (NodeContainer c) const
+UdpNdnHelper::Install (NodeContainer c) const
 {
   ApplicationContainer apps;
   for (NodeContainer::Iterator i = c.Begin (); i != c.End (); ++i)
@@ -64,9 +64,9 @@ UdpNdnServerHelper::Install (NodeContainer c) const
 }
 
 Ptr<Application>
-UdpNdnServerHelper::InstallPriv (Ptr<Node> node) const
+UdpNdnHelper::InstallPriv (Ptr<Node> node) const
 {
-  Ptr<Application> app = m_factory.Create<UdpNdnServer> ();
+  Ptr<Application> app = m_factory.Create<UdpNdn> ();
   node->AddApplication (app);
 
   return app;

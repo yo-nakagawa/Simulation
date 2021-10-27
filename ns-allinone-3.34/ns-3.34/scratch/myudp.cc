@@ -101,8 +101,8 @@ main (int argc, char *argv[])
 // Create a UdpEchoServer application on node one.
 //
   uint16_t port = 50000;  // well-known echo port number
-  UdpNdnServerHelper server (port);
-  ApplicationContainer apps = server.Install (n);
+  UdpNdnHelper udpNdn (port);
+  ApplicationContainer apps = udpNdn.Install (n);
   // PacketSinkHelper packetSinkHelper ("ns3::UdpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), port));
   // ApplicationContainer apps = packetSinkHelper.Install (n.Get (1));
   apps.Start (Seconds (1.0));

@@ -37,37 +37,37 @@
 #include "/home/nuc1/Simulation/cereal-1.3.0/include/cereal/archives/json.hpp"
 namespace ns3 {
 
-NS_LOG_COMPONENT_DEFINE ("UdpNdnServerApplication");
+NS_LOG_COMPONENT_DEFINE ("UdpNdnApplication");
 
-NS_OBJECT_ENSURE_REGISTERED (UdpNdnServer);
+NS_OBJECT_ENSURE_REGISTERED (UdpNdn);
 
 TypeId
-UdpNdnServer::GetTypeId (void)
+UdpNdn::GetTypeId (void)
 {
-  static TypeId tid = TypeId ("ns3::UdpNdnServer")
+  static TypeId tid = TypeId ("ns3::UdpNdn")
     .SetParent<Application> ()
     .SetGroupName("Applications")
-    .AddConstructor<UdpNdnServer> ()
+    .AddConstructor<UdpNdn> ()
     .AddAttribute ("Port", "Port on which we listen for incoming packets.",
                    UintegerValue (9),
-                   MakeUintegerAccessor (&UdpNdnServer::m_port),
+                   MakeUintegerAccessor (&UdpNdn::m_port),
                    MakeUintegerChecker<uint16_t> ())
     .AddTraceSource ("Rx", "A packet has been received",
-                     MakeTraceSourceAccessor (&UdpNdnServer::m_rxTrace),
+                     MakeTraceSourceAccessor (&UdpNdn::m_rxTrace),
                      "ns3::Packet::TracedCallback")
     .AddTraceSource ("RxWithAddresses", "A packet has been received",
-                     MakeTraceSourceAccessor (&UdpNdnServer::m_rxTraceWithAddresses),
+                     MakeTraceSourceAccessor (&UdpNdn::m_rxTraceWithAddresses),
                      "ns3::Packet::TwoAddressTracedCallback")
   ;
   return tid;
 }
 
-UdpNdnServer::UdpNdnServer ()
+UdpNdn::UdpNdn ()
 {
   NS_LOG_FUNCTION (this);
 }
 
-UdpNdnServer::~UdpNdnServer()
+UdpNdn::~UdpNdn()
 {
   NS_LOG_FUNCTION (this);
   m_serverSocket = 0;
@@ -75,14 +75,14 @@ UdpNdnServer::~UdpNdnServer()
 }
 
 void
-UdpNdnServer::DoDispose (void)
+UdpNdn::DoDispose (void)
 {
   NS_LOG_FUNCTION (this);
   Application::DoDispose ();
 }
 
 void 
-UdpNdnServer::StartApplication (void)
+UdpNdn::StartApplication (void)
 {
   NS_LOG_FUNCTION (this);
 
@@ -97,11 +97,11 @@ UdpNdnServer::StartApplication (void)
         }
     }
 
-  m_serverSocket->SetRecvCallback (MakeCallback (&UdpNdnServer::HandleRead, this)); //パケットを受信したら、こいつが呼ばれる
-  Simulator::Schedule (Seconds(0.), &UdpNdnServer::Send, this);
+  m_serverSocket->SetRecvCallback (MakeCallback (&UdpNdn::HandleRead, this)); //パケットを受信したら、こいつが呼ばれる
+  Simulator::Schedule (Seconds(0.), &UdpNdn::Send, this);
 }
 void 
-UdpNdnServer::Send (void)
+UdpNdn::Send (void)
 {
   std::cout << "Send" << std::endl;
 
@@ -122,7 +122,7 @@ UdpNdnServer::Send (void)
 }
 
 void 
-UdpNdnServer::StopApplication ()
+UdpNdn::StopApplication ()
 {
   NS_LOG_FUNCTION (this);
 
@@ -139,7 +139,7 @@ UdpNdnServer::StopApplication ()
 }
 
 void 
-UdpNdnServer::HandleRead (Ptr<Socket> socket) //受信処理
+UdpNdn::HandleRead (Ptr<Socket> socket) //受信処理
 {
   NS_LOG_FUNCTION (this << socket);
 

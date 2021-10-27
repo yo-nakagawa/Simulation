@@ -185,7 +185,7 @@ Experiment::InstallApplications ()
 
     /* Install UDP Receiver on the access point */
   portNum = 50000;
-  UdpNdnServerHelper server (portNum);
+  UdpNdnHelper server (portNum);
   ApplicationContainer serverapps = server.Install (leaderNode);
   serverapps.Start (Seconds (3.0));
   serverapps.Stop (Seconds (8.0));

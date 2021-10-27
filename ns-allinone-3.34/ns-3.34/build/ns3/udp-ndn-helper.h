@@ -34,16 +34,16 @@ namespace ns3 {
  * \brief Create a server application which waits for input UDP packets
  *        and sends them back to the original sender.
  */
-class UdpNdnServerHelper
+class UdpNdnHelper
 {
 public:
   /**
-   * Create UdpNdnServerHelper which will make life easier for people trying
+   * Create UdpNdnHelper which will make life easier for people trying
    * to set up simulations with echos.
    *
    * \param port The port the server will wait on for incoming packets
    */
-  UdpNdnServerHelper (uint16_t port);
+  UdpNdnHelper (uint16_t port);
 
   /**
    * Record an attribute to be set in each Application after it is is created.
@@ -54,7 +54,7 @@ public:
   void SetAttribute (std::string name, const AttributeValue &value);
 
   /**
-   * Create a UdpNdnServerApplication on the specified Node.
+   * Create a UdpNdnApplication on the specified Node.
    *
    * \param node The node on which to create the Application.  The node is
    *             specified by a Ptr<Node>.
@@ -64,7 +64,7 @@ public:
   ApplicationContainer Install (Ptr<Node> node) const;
 
   /**
-   * Create a UdpNdnServerApplication on specified node
+   * Create a UdpNdnApplication on specified node
    *
    * \param nodeName The node on which to create the application.  The node
    *                 is specified by a node name previously registered with
@@ -88,10 +88,10 @@ public:
 
 private:
   /**
-   * Install an ns3::UdpNdnServer on the node configured with all the
+   * Install an ns3::UdpNdn on the node configured with all the
    * attributes set with SetAttribute.
    *
-   * \param node The node on which an UdpNdnServer will be installed.
+   * \param node The node on which an UdpNdn will be installed.
    * \returns Ptr to the application installed.
    */
   Ptr<Application> InstallPriv (Ptr<Node> node) const;

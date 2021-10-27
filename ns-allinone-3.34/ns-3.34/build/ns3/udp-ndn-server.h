@@ -42,7 +42,7 @@ class Packet;
  *
  * Every packet received is sent back.
  */
-class UdpNdnServer : public Application 
+class UdpNdn : public Application 
 {
 public:
   /**
@@ -50,8 +50,8 @@ public:
    * \return the object TypeId
    */
   static TypeId GetTypeId (void);
-  UdpNdnServer ();
-  virtual ~UdpNdnServer ();
+  UdpNdn ();
+  virtual ~UdpNdn ();
 
 protected:
   virtual void DoDispose (void);
