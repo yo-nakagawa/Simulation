@@ -1,0 +1,7 @@
+{
+    "value0": {
+        "m_name": "/Osaka/weather",
+        "m_typeId": 0,
+        "m_content": ""
+    }
+}{

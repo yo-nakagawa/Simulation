@@ -2,6 +2,7 @@
 /*
 お試し
 adhoc + constantplace + + UDP(NDN)
+udpechoクライアント　と　ndnサーバ
  */
 #include "ns3/core-module.h"
 #include "ns3/gnuplot.h"
@@ -18,7 +19,7 @@ adhoc + constantplace + + UDP(NDN)
 #include "ns3/packet-socket-helper.h"
 #include "ns3/packet-socket-address.h"
 #include "ns3/netanim-module.h"
-#include "ns3/aodv-module.h"
+#include "ns3/dsdv-module.h"
 #include "ns3/internet-module.h"
 #include "ns3/applications-module.h"
 
@@ -146,11 +147,11 @@ Experiment::CreateDevices ()
   WifiMacHelper wifiMac;
   wifiMac.SetType ("ns3::AdhocWifiMac"); //アドホックモードを指定
   YansWifiPhyHelper wifiPhy;
-  //YansWifiChannelHelper wifiChannel = YansWifiChannelHelper::Default ();
-  YansWifiChannelHelper wifiChannel;
-  wifiChannel.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
-  wifiChannel.AddPropagationLoss ("ns3::RangePropagationLossModel",
-                                  "MaxRange", DoubleValue (13.0)); //wifiの距離
+  YansWifiChannelHelper wifiChannel = YansWifiChannelHelper::Default ();
+  // YansWifiChannelHelper wifiChannel;
+  // wifiChannel.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
+  // wifiChannel.AddPropagationLoss ("ns3::RangePropagationLossModel",
+  //                                 "MaxRange", DoubleValue (13.0)); //wifiの距離
   wifiPhy.SetChannel (wifiChannel.Create ()); //チャネルの設定 (Createメソッドで新チャネルが返ってくる)
   WifiHelper wifi;
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager", "DataMode", StringValue ("OfdmRate6Mbps"), "RtsCtsThreshold", UintegerValue (0));
@@ -162,10 +163,10 @@ Experiment::CreateDevices ()
 void
 Experiment::InstallInternetStack ()
 {
-  AodvHelper aodv;
-  // you can configure AODV attributes here using aodv.Set(name, value)
+  DsdvHelper dsdv;
+  // you can configure DSDV attributes here using aodv.Set(name, value)
   InternetStackHelper stack;
-  stack.SetRoutingHelper (aodv); // has effect on the next Install ()
+  stack.SetRoutingHelper (dsdv); // has effect on the next Install ()
   stack.Install (nodes);
   Ipv4AddressHelper address; //IPv4の割当
   address.SetBase ("10.0.0.0", "255.0.0.0");
@@ -185,7 +186,7 @@ Experiment::InstallApplications ()
 
     /* Install UDP Receiver on the access point */
   portNum = 50000;
-  UdpNdnHelper server (portNum);
+  UdpNdnHelper server (portNum,interfaces.GetAddress (0) );
   ApplicationContainer serverapps = server.Install (leaderNode);
   serverapps.Start (Seconds (3.0));
   serverapps.Stop (Seconds (8.0));

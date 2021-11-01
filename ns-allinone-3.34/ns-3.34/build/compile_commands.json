@@ -6141,7 +6141,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test2.cc.8.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test2.cc.9.o",
     "file": "../scratch/test2.cc"
   },
   {
@@ -6151,7 +6151,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.8.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.10.o",
     "file": "../scratch/test3.cc"
   },
   {
@@ -6196,7 +6196,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myudp.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myudp.cc.5.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myudp.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myudp.cc.6.o",
     "file": "../scratch/myudp.cc"
   },
   {
@@ -6223,5 +6223,15 @@
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
     "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/applications/model/udp-ndn.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/applications/model/udp-ndn.cc.1.o",
     "file": "../src/applications/model/udp-ndn.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/study3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study3.cc.5.o",
+    "file": "../scratch/study3.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myudp2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myudp2.cc.8.o",
+    "file": "../scratch/myudp2.cc"
   }
 ]

@@ -24,6 +24,7 @@
 #include "ns3/ptr.h"
 #include "ns3/address.h"
 #include "ns3/traced-callback.h"
+#include "ns3/inet-socket-address.h"
 #include <map>
 
 namespace ns3 {
@@ -68,13 +69,15 @@ private:
    *
    * \param socket the socket the packet was received to.
    */
-  void Send(void);
+  void Send(InetSocketAddress local);
   void HandleRead (Ptr<Socket> socket);
+  void HandleRead2 (Ptr<Socket> socket);
 
   uint16_t m_port; //!< Port on which we listen for incoming packets.
   Ptr<Socket> m_serverSocket; //!< IPv4 Socket
   Ptr<Socket> m_clientSocket;
   Address m_local; //!< local multicast address
+  Address m_myAddress;
 
   /// Callbacks for tracing the packet Rx events
   TracedCallback<Ptr<const Packet> > m_rxTrace;

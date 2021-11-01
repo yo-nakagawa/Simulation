@@ -100,6 +100,7 @@ main (int argc, char *argv[])
 //
 // Create a UdpEchoServer application on node one.
 //
+#if 0
   uint16_t port = 50000;  // well-known echo port number
   UdpNdnHelper udpNdn (port);
   ApplicationContainer apps = udpNdn.Install (n);
@@ -107,6 +108,7 @@ main (int argc, char *argv[])
   // ApplicationContainer apps = packetSinkHelper.Install (n.Get (1));
   apps.Start (Seconds (1.0));
   apps.Stop (Seconds (10.0));
+#endif
 
 //
 // Create a UdpEchoClient application to send UDP datagrams from node zero to

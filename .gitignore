@@ -1,2 +1,3 @@
 ns-allinone-3.34/ns-3.34/build/src/lte/bindings/ns3module.cc.7.o
-ns-allinone-3.34/ns-3.34/*.pcap
+ns-allinone-3.34/ns-3.34/**/*.tr
+ns-allinone-3.34/ns-3.34/**/*.o

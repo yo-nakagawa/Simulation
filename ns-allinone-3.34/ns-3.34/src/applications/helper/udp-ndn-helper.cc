@@ -24,10 +24,11 @@
 
 namespace ns3 {
 
-UdpNdnHelper::UdpNdnHelper (uint16_t port)
+UdpNdnHelper::UdpNdnHelper (uint16_t port, Address address)
 {
   m_factory.SetTypeId (UdpNdn::GetTypeId ());
   SetAttribute ("Port", UintegerValue (port));
+  SetAttribute ("MyAddress", AddressValue (address));
 }
 
 void 
