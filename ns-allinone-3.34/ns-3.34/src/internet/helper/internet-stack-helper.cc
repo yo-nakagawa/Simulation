@@ -311,8 +311,9 @@ InternetStackHelper::Install (Ptr<Node> node) const
         }
       // Set routing
       Ptr<Ipv4> ipv4 = node->GetObject<Ipv4> ();
-      Ptr<Ipv4RoutingProtocol> ipv4Routing = m_routing->Create (node);
+      Ptr<Ipv4RoutingProtocol> ipv4Routing = m_routing->Create (node);  
       ipv4->SetRoutingProtocol (ipv4Routing);
+       
     }
 
   if (m_ipv6Enabled)

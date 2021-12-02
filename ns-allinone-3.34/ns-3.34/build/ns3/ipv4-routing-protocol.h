@@ -171,6 +171,8 @@ public:
    */
   virtual void PrintRoutingTable (Ptr<OutputStreamWrapper> stream, Time::Unit unit = Time::S) const = 0;
 
+  virtual Time SetUp (void) = 0;
+
 };
 
 } // namespace ns3

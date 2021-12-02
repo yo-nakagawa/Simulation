@@ -225,15 +225,18 @@ RoutingTableEntry::Print (Ptr<OutputStreamWrapper> stream, Time::Unit unit /*= T
 void
 RoutingTable::Purge (std::map<Ipv4Address, RoutingTableEntry> & removedAddresses)
 {
-  if (m_ipv4AddressEntry.empty ())
-    {
+  if (m_ipv4AddressEntry.empty ())                                                                                                      //削除するものがないなら、即リターン
+    {  
+      
       return;
     }
   for (std::map<Ipv4Address, RoutingTableEntry>::iterator i = m_ipv4AddressEntry.begin (); i != m_ipv4AddressEntry.end (); )
     {
       std::map<Ipv4Address, RoutingTableEntry>::iterator itmp = i;
-      if (i->second.GetLifeTime () > m_holddownTime && (i->second.GetHop () > 0))
+      m_holddownTime = Seconds(10.0);
+      if (i->second.GetLifeTime () > m_holddownTime && (i->second.GetHop () > 0))                                                               //定期的なアドバタイズの間隔　> 3秒以上なら
         {
+          std::cout << "Destination : "<< i->second.GetDestination() << " is deleted!" << std::endl;
           for (std::map<Ipv4Address, RoutingTableEntry>::iterator j = m_ipv4AddressEntry.begin (); j != m_ipv4AddressEntry.end (); )
             {
               if ((j->second.GetNextHop () == i->second.GetDestination ()) && (i->second.GetHop () != j->second.GetHop ()))

@@ -556,7 +556,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/network/model/node.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/network/model/node.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/node.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/network/model/node.cc.1.o",
     "file": "../src/network/model/node.cc"
   },
   {
@@ -586,7 +586,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/network/model/socket.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/network/model/socket.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/network/model/socket.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/network/model/socket.cc.1.o",
     "file": "../src/network/model/socket.cc"
   },
   {
@@ -971,12 +971,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/ipv4-interface.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-interface.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-interface.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-interface.cc.1.o",
     "file": "../src/internet/model/ipv4-interface.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/ipv4-l3-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-l3-protocol.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-l3-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-l3-protocol.cc.1.o",
     "file": "../src/internet/model/ipv4-l3-protocol.cc"
   },
   {
@@ -1001,12 +1001,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/arp-cache.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/arp-cache.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/arp-cache.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/arp-cache.cc.1.o",
     "file": "../src/internet/model/arp-cache.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/arp-l3-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/arp-l3-protocol.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/arp-l3-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/arp-l3-protocol.cc.1.o",
     "file": "../src/internet/model/arp-l3-protocol.cc"
   },
   {
@@ -1421,7 +1421,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/ipv4-list-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-list-routing.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-list-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-list-routing.cc.1.o",
     "file": "../src/internet/model/ipv4-list-routing.cc"
   },
   {
@@ -1431,7 +1431,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/ipv4-list-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-list-routing-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ipv4-list-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-list-routing-helper.cc.1.o",
     "file": "../src/internet/helper/ipv4-list-routing-helper.cc"
   },
   {
@@ -1441,7 +1441,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/ipv4-static-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-static-routing.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-static-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-static-routing.cc.1.o",
     "file": "../src/internet/model/ipv4-static-routing.cc"
   },
   {
@@ -1461,7 +1461,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/ipv4-static-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-static-routing-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ipv4-static-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-static-routing-helper.cc.1.o",
     "file": "../src/internet/helper/ipv4-static-routing-helper.cc"
   },
   {
@@ -1471,7 +1471,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/global-router-interface.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/global-router-interface.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/global-router-interface.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/global-router-interface.cc.1.o",
     "file": "../src/internet/model/global-router-interface.cc"
   },
   {
@@ -1481,7 +1481,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/global-route-manager-impl.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/global-route-manager-impl.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/global-route-manager-impl.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/global-route-manager-impl.cc.1.o",
     "file": "../src/internet/model/global-route-manager-impl.cc"
   },
   {
@@ -1491,17 +1491,17 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/ipv4-global-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-global-routing.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/ipv4-global-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/ipv4-global-routing.cc.1.o",
     "file": "../src/internet/model/ipv4-global-routing.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/ipv4-global-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-global-routing-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ipv4-global-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-global-routing-helper.cc.1.o",
     "file": "../src/internet/helper/ipv4-global-routing-helper.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/internet-stack-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/internet-stack-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/internet-stack-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/internet-stack-helper.cc.1.o",
     "file": "../src/internet/helper/internet-stack-helper.cc"
   },
   {
@@ -1511,7 +1511,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/ipv4-address-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-address-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ipv4-address-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-address-helper.cc.1.o",
     "file": "../src/internet/helper/ipv4-address-helper.cc"
   },
   {
@@ -1521,7 +1521,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/ipv4-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-routing-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/ipv4-routing-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/ipv4-routing-helper.cc.1.o",
     "file": "../src/internet/helper/ipv4-routing-helper.cc"
   },
   {
@@ -1576,7 +1576,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/model/rip.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/rip.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/model/rip.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/model/rip.cc.1.o",
     "file": "../src/internet/model/rip.cc"
   },
   {
@@ -1586,7 +1586,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet/helper/rip-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/rip-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet/helper/rip-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet/helper/rip-helper.cc.1.o",
     "file": "../src/internet/helper/rip-helper.cc"
   },
   {
@@ -2116,7 +2116,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/wifi-protection.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-protection.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/wifi-protection.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-protection.cc.1.o",
     "file": "../src/wifi/model/wifi-protection.cc"
   },
   {
@@ -2136,7 +2136,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/wifi-default-protection-manager.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-default-protection-manager.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/wifi-default-protection-manager.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-default-protection-manager.cc.1.o",
     "file": "../src/wifi/model/wifi-default-protection-manager.cc"
   },
   {
@@ -2151,7 +2151,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/frame-exchange-manager.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/frame-exchange-manager.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/frame-exchange-manager.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/frame-exchange-manager.cc.1.o",
     "file": "../src/wifi/model/frame-exchange-manager.cc"
   },
   {
@@ -2236,7 +2236,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/regular-wifi-mac.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/regular-wifi-mac.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/regular-wifi-mac.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/regular-wifi-mac.cc.1.o",
     "file": "../src/wifi/model/regular-wifi-mac.cc"
   },
   {
@@ -2246,7 +2246,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/wifi-remote-station-manager.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-remote-station-manager.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/wifi-remote-station-manager.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-remote-station-manager.cc.1.o",
     "file": "../src/wifi/model/wifi-remote-station-manager.cc"
   },
   {
@@ -2256,17 +2256,17 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/sta-wifi-mac.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/sta-wifi-mac.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/sta-wifi-mac.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/sta-wifi-mac.cc.1.o",
     "file": "../src/wifi/model/sta-wifi-mac.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/adhoc-wifi-mac.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/adhoc-wifi-mac.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/adhoc-wifi-mac.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/adhoc-wifi-mac.cc.1.o",
     "file": "../src/wifi/model/adhoc-wifi-mac.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/model/wifi-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-net-device.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/model/wifi-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/model/wifi-net-device.cc.1.o",
     "file": "../src/wifi/model/wifi-net-device.cc"
   },
   {
@@ -2636,7 +2636,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/helper/wifi-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/helper/wifi-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/helper/wifi-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/helper/wifi-helper.cc.1.o",
     "file": "../src/wifi/helper/wifi-helper.cc"
   },
   {
@@ -2651,7 +2651,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wifi/helper/wifi-mac-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/helper/wifi-mac-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wifi/helper/wifi-mac-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wifi/helper/wifi-mac-helper.cc.1.o",
     "file": "../src/wifi/helper/wifi-mac-helper.cc"
   },
   {
@@ -2671,7 +2671,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/aodv/model/aodv-rqueue.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/aodv/model/aodv-rqueue.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/model/aodv-rqueue.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/aodv/model/aodv-rqueue.cc.1.o",
     "file": "../src/aodv/model/aodv-rqueue.cc"
   },
   {
@@ -2686,12 +2686,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/aodv/model/aodv-routing-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/aodv/model/aodv-routing-protocol.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/model/aodv-routing-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/aodv/model/aodv-routing-protocol.cc.1.o",
     "file": "../src/aodv/model/aodv-routing-protocol.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/aodv/helper/aodv-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/aodv/helper/aodv-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/aodv -I../src/aodv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/aodv/helper/aodv-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/aodv/helper/aodv-helper.cc.1.o",
     "file": "../src/aodv/helper/aodv-helper.cc"
   },
   {
@@ -2736,7 +2736,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/internet-apps/model/dhcp-client.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet-apps/model/dhcp-client.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/internet-apps/model/dhcp-client.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/internet-apps/model/dhcp-client.cc.1.o",
     "file": "../src/internet-apps/model/dhcp-client.cc"
   },
   {
@@ -3151,7 +3151,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/flow-monitor/model/ipv4-flow-probe.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/flow-monitor/model/ipv4-flow-probe.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/model/ipv4-flow-probe.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/flow-monitor/model/ipv4-flow-probe.cc.1.o",
     "file": "../src/flow-monitor/model/ipv4-flow-probe.cc"
   },
   {
@@ -3166,7 +3166,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/flow-monitor/helper/flow-monitor-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/flow-monitor/helper/flow-monitor-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/flow-monitor/helper/flow-monitor-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/flow-monitor/helper/flow-monitor-helper.cc.1.o",
     "file": "../src/flow-monitor/helper/flow-monitor-helper.cc"
   },
   {
@@ -3241,7 +3241,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/csma-layout/model/csma-star-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/csma-layout/model/csma-star-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/csma-layout/model/csma-star-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/csma-layout/model/csma-star-helper.cc.1.o",
     "file": "../src/csma-layout/model/csma-star-helper.cc"
   },
   {
@@ -3256,27 +3256,27 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsdv/model/dsdv-rtable.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-rtable.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsdv/model/dsdv-rtable.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-rtable.cc.1.o",
     "file": "../src/dsdv/model/dsdv-rtable.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsdv/model/dsdv-packet-queue.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-packet-queue.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsdv/model/dsdv-packet-queue.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-packet-queue.cc.1.o",
     "file": "../src/dsdv/model/dsdv-packet-queue.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsdv/model/dsdv-packet.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-packet.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsdv/model/dsdv-packet.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-packet.cc.1.o",
     "file": "../src/dsdv/model/dsdv-packet.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsdv/model/dsdv-routing-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-routing-protocol.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsdv/model/dsdv-routing-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/model/dsdv-routing-protocol.cc.1.o",
     "file": "../src/dsdv/model/dsdv-routing-protocol.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsdv/helper/dsdv-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/helper/dsdv-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsdv -I../src/dsdv -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsdv/helper/dsdv-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsdv/helper/dsdv-helper.cc.1.o",
     "file": "../src/dsdv/helper/dsdv-helper.cc"
   },
   {
@@ -3291,12 +3291,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-routing.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-routing.cc.1.o",
     "file": "../src/dsr/model/dsr-routing.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-options.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-options.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-options.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-options.cc.1.o",
     "file": "../src/dsr/model/dsr-options.cc"
   },
   {
@@ -3311,22 +3311,22 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-maintain-buff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-maintain-buff.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-maintain-buff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-maintain-buff.cc.1.o",
     "file": "../src/dsr/model/dsr-maintain-buff.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-passive-buff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-passive-buff.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-passive-buff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-passive-buff.cc.1.o",
     "file": "../src/dsr/model/dsr-passive-buff.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-rsendbuff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-rsendbuff.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-rsendbuff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-rsendbuff.cc.1.o",
     "file": "../src/dsr/model/dsr-rsendbuff.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-rcache.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-rcache.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-rcache.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-rcache.cc.1.o",
     "file": "../src/dsr/model/dsr-rcache.cc"
   },
   {
@@ -3341,22 +3341,22 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-errorbuff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-errorbuff.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-errorbuff.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-errorbuff.cc.1.o",
     "file": "../src/dsr/model/dsr-errorbuff.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/model/dsr-network-queue.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-network-queue.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/model/dsr-network-queue.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/model/dsr-network-queue.cc.1.o",
     "file": "../src/dsr/model/dsr-network-queue.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/helper/dsr-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/helper/dsr-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/helper/dsr-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/helper/dsr-helper.cc.1.o",
     "file": "../src/dsr/helper/dsr-helper.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/dsr/helper/dsr-main-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/helper/dsr-main-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/dsr -I../src/dsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/dsr/helper/dsr-main-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/dsr/helper/dsr-main-helper.cc.1.o",
     "file": "../src/dsr/helper/dsr-main-helper.cc"
   },
   {
@@ -3766,17 +3766,17 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/lte/model/lte-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/lte-net-device.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/lte-net-device.cc.1.o",
     "file": "../src/lte/model/lte-net-device.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/lte/model/lte-enb-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/lte-enb-net-device.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-enb-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/lte-enb-net-device.cc.1.o",
     "file": "../src/lte/model/lte-enb-net-device.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/lte/model/lte-ue-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/lte-ue-net-device.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/lte-ue-net-device.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/lte-ue-net-device.cc.1.o",
     "file": "../src/lte/model/lte-ue-net-device.cc"
   },
   {
@@ -3801,7 +3801,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/lte/helper/no-backhaul-epc-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/helper/no-backhaul-epc-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/helper/no-backhaul-epc-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/helper/no-backhaul-epc-helper.cc.1.o",
     "file": "../src/lte/helper/no-backhaul-epc-helper.cc"
   },
   {
@@ -4026,7 +4026,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/lte/model/epc-pgw-application.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/epc-pgw-application.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/epc-pgw-application.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/epc-pgw-application.cc.1.o",
     "file": "../src/lte/model/epc-pgw-application.cc"
   },
   {
@@ -4056,7 +4056,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/lte/model/epc-tft-classifier.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/epc-tft-classifier.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/lte/model/epc-tft-classifier.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/lte/model/epc-tft-classifier.cc.1.o",
     "file": "../src/lte/model/epc-tft-classifier.cc"
   },
   {
@@ -4986,7 +4986,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wave/model/bsm-application.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wave/model/bsm-application.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/model/bsm-application.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wave/model/bsm-application.cc.1.o",
     "file": "../src/wave/model/bsm-application.cc"
   },
   {
@@ -5021,27 +5021,27 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/wave/helper/wave-bsm-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wave/helper/wave-bsm-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/wave/helper/wave-bsm-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/wave/helper/wave-bsm-helper.cc.1.o",
     "file": "../src/wave/helper/wave-bsm-helper.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/point-to-point-layout/model/point-to-point-dumbbell.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/point-to-point-layout/model/point-to-point-dumbbell.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point-layout/model/point-to-point-dumbbell.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/point-to-point-layout/model/point-to-point-dumbbell.cc.1.o",
     "file": "../src/point-to-point-layout/model/point-to-point-dumbbell.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/point-to-point-layout/model/point-to-point-grid.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/point-to-point-layout/model/point-to-point-grid.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point-layout/model/point-to-point-grid.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/point-to-point-layout/model/point-to-point-grid.cc.1.o",
     "file": "../src/point-to-point-layout/model/point-to-point-grid.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/point-to-point-layout/model/point-to-point-star.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/point-to-point-layout/model/point-to-point-star.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/point-to-point-layout -I../src/point-to-point-layout -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/point-to-point-layout/model/point-to-point-star.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/point-to-point-layout/model/point-to-point-star.cc.1.o",
     "file": "../src/point-to-point-layout/model/point-to-point-star.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/netanim -I../src/netanim -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/netanim/model/animation-interface.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/netanim/model/animation-interface.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/netanim -I../src/netanim -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/netanim/model/animation-interface.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/netanim/model/animation-interface.cc.1.o",
     "file": "../src/netanim/model/animation-interface.cc"
   },
   {
@@ -5116,12 +5116,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/nix-vector-routing -I../src/nix-vector-routing -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/nix-vector-routing/model/ipv4-nix-vector-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/nix-vector-routing/model/ipv4-nix-vector-routing.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/nix-vector-routing -I../src/nix-vector-routing -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/nix-vector-routing/model/ipv4-nix-vector-routing.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/nix-vector-routing/model/ipv4-nix-vector-routing.cc.1.o",
     "file": "../src/nix-vector-routing/model/ipv4-nix-vector-routing.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/nix-vector-routing -I../src/nix-vector-routing -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/nix-vector-routing/helper/ipv4-nix-vector-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/nix-vector-routing/helper/ipv4-nix-vector-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/nix-vector-routing -I../src/nix-vector-routing -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/nix-vector-routing/helper/ipv4-nix-vector-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/nix-vector-routing/helper/ipv4-nix-vector-helper.cc.1.o",
     "file": "../src/nix-vector-routing/helper/ipv4-nix-vector-helper.cc"
   },
   {
@@ -5156,12 +5156,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/olsr -I../src/olsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/olsr/model/olsr-routing-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/olsr/model/olsr-routing-protocol.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/olsr -I../src/olsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/olsr/model/olsr-routing-protocol.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/olsr/model/olsr-routing-protocol.cc.1.o",
     "file": "../src/olsr/model/olsr-routing-protocol.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/olsr -I../src/olsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../src/olsr/helper/olsr-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/olsr/helper/olsr-helper.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/olsr -I../src/olsr -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../src/olsr/helper/olsr-helper.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/src/olsr/helper/olsr-helper.cc.1.o",
     "file": "../src/olsr/helper/olsr-helper.cc"
   },
   {
@@ -6096,7 +6096,7 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/subdir/scratch-simulator-subdir.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/subdir/scratch-simulator-subdir.cc.7.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/subdir/scratch-simulator-subdir.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/subdir/scratch-simulator-subdir.cc.8.o",
     "file": "../scratch/subdir/scratch-simulator-subdir.cc"
   },
   {
@@ -6146,12 +6146,12 @@
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 -DNS3_ENABLE_EXAMPLES ../scratch/study1.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study1.cc.5.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/study1.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/study1.cc.4.o",
     "file": "../scratch/study1.cc"
   },
   {
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.10.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/test3.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/test3.cc.9.o",
     "file": "../scratch/test3.cc"
   },
   {
@@ -6233,5 +6233,10 @@
     "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
     "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myudp2.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myudp2.cc.8.o",
     "file": "../scratch/myudp2.cc"
+  },
+  {
+    "directory": "/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -pthread -I. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SEMAPHORE_H=1 -DHAVE_IF_TUN_H=1 ../scratch/myap.cc -c -o/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build/scratch/myap.cc.6.o",
+    "file": "../scratch/myap.cc"
   }
 ]

@@ -209,6 +209,12 @@ public:
   {
     return (Simulator::Now () - m_lifeTime);
   }
+
+  Time 
+  getaa () const
+  {
+    return m_lifeTime;
+  } 
   /**
    * Set settling time
    * \param settlingTime the settling time

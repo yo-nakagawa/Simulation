@@ -132,10 +132,16 @@ public:
   {
     return m_dstSeqNo;
   }
+  std::string
+  GetAdd () const 
+  {
+    return m_add;
+  }
 private:
   Ipv4Address m_dst; ///< Destination IP Address
   uint32_t m_hopCount; ///< Number of Hops
   uint32_t m_dstSeqNo; ///< Destination Sequence Number
+  std::string m_add;
 };
 static inline std::ostream & operator<< (std::ostream& os, const DsdvHeader & packet)
 {

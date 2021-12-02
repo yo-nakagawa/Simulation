@@ -307,7 +307,6 @@ FrameExchangeManager::StartTransmission (Ptr<Txop> dcf)
   txParams.m_acknowledgment = m_ackManager->TryAddMpdu (mpdu, txParams);
   txParams.AddMpdu (mpdu);
   UpdateTxDuration (mpdu->GetHeader ().GetAddr1 (), txParams);
-
   SendMpduWithProtection (mpdu, txParams);
 
   return true;
@@ -366,7 +365,6 @@ FrameExchangeManager::SendMpduWithProtection (Ptr<WifiMacQueueItem> mpdu, WifiTx
 
   // Set QoS Ack policy if this is a QoS data frame
   WifiAckManager::SetQosAckPolicy (m_mpdu, m_txParams.m_acknowledgment.get ());
-
   switch (m_txParams.m_protection->method)
     {
     case WifiProtection::RTS_CTS:
@@ -391,7 +389,6 @@ FrameExchangeManager::SendMpdu (void)
   Time txDuration = m_phy->CalculateTxDuration (m_mpdu->GetSize (), m_txParams.m_txVector, m_phy->GetPhyBand ());
 
   NS_ASSERT (m_txParams.m_acknowledgment);
-
   if (m_txParams.m_acknowledgment->method == WifiAcknowledgment::NONE)
     {
       Simulator::Schedule (txDuration, &FrameExchangeManager::TransmissionSucceeded, this);

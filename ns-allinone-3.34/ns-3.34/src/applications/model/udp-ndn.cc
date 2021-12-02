@@ -28,12 +28,16 @@
 #include "ns3/socket-factory.h"
 #include "ns3/packet.h"
 #include "ns3/uinteger.h"
+#include "ns3/string.h"
 #include "ns3/ipv4-header.h"
 #include "ns3/udp-header.h"
 #include "udp-ndn.h"
 #include "ndn-packet.h"
 #include "/home/nuc1/Simulation/cereal-1.3.0/include/cereal/archives/json.hpp"
 #include <fstream>
+#include "ns3/ipv4-interface.h"
+#include "ns3/udp-socket-factory.h"
+
 namespace ns3 {
 
 NS_LOG_COMPONENT_DEFINE ("UdpNdnApplication");
@@ -51,10 +55,10 @@ UdpNdn::GetTypeId (void)
                    UintegerValue (9),
                    MakeUintegerAccessor (&UdpNdn::m_port),
                    MakeUintegerChecker<uint16_t> ())
-    .AddAttribute ("MyAddress", " My ipv4 address.",
-                   AddressValue (),
-                   MakeAddressAccessor (&UdpNdn::m_myAddress),
-                   MakeAddressChecker ())
+    .AddAttribute ("Name", "Name the node has",
+                   StringValue ("kari"),
+                   MakeStringAccessor (&UdpNdn::m_name),
+                   MakeStringChecker())                   
     .AddTraceSource ("Rx", "A packet has been received",
                      MakeTraceSourceAccessor (&UdpNdn::m_rxTrace),
                      "ns3::Packet::TracedCallback")
@@ -88,7 +92,8 @@ void
 UdpNdn::StartApplication (void)
 {
   NS_LOG_FUNCTION (this);
-
+  SetMyIp();
+  std::cout << m_myAddress << std::endl;
   if (m_serverSocket == 0)
     {
       TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
@@ -99,22 +104,43 @@ UdpNdn::StartApplication (void)
           NS_FATAL_ERROR ("Failed to bind socket");
         }
     }
+  
   TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
   m_clientSocket = Socket::CreateSocket (GetNode (), tid); //socketの生成
-    Ipv4Address ad ("10.0.0.1");                              // Address型に変換 
-  //if(m_myAddress != ad){
-    std::cout << "ぺぺぺ" << std::endl;
-    InetSocketAddress local = InetSocketAddress (ad, m_port); //IP+port でソケットアドレス生成
+  #if 0   
+  uint32_t pport =  269;                                                                   //アプリ層にて、dsdvパケットをリスンしたかった
+  m_routingSocket = Socket::CreateSocket (GetNode (), tid); //socketの生成
+  m_routingSocket->BindToNetDevice (m_device);
+  m_routingSocket->Bind (InetSocketAddress (Ipv4Address::GetAny (), pport));
+  m_routingSocket->SetAllowBroadcast (true);
+  m_routingSocket->SetRecvCallback (MakeCallback (&UdpNdn::HandleRead2, this));
+  #endif
+  Ipv4Address ad ("10.0.0.3");                              // Address型に変換 
+
+  InetSocketAddress local = InetSocketAddress (ad, m_port); //IP+port でソケットアドレス生成
   m_serverSocket->SetRecvCallback (MakeCallback (&UdpNdn::HandleRead, this)); //パケットを受信したら、こいつが呼ばれる
   m_clientSocket->SetRecvCallback (MakeCallback (&UdpNdn::HandleRead, this)); 
-  Simulator::Schedule (Seconds(0.), &UdpNdn::Send, this, local);
+   
+  
+  //if(m_myAddress == Ipv4Address("10.0.0.1")){
+    Simulator::Schedule (Seconds(0.), &UdpNdn::Send, this, local);
+  //}
+  Simulator::Schedule (Seconds(0.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(0.0), &UdpNdn::RoutingPacketSend, this);
+  Simulator::Schedule (Seconds(4.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(6.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(8.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(10.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(12.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(14.0), &UdpNdn::Print, this);
+  Simulator::Schedule (Seconds(5.0), &UdpNdn::Send, this, local);
+  Simulator::Schedule (Seconds(16.0), &UdpNdn::Print, this);
 }
 void 
 UdpNdn::Send (InetSocketAddress local)
 {
-  std::cout << "Send" << std::endl;
-
-
+  std::cout << "Send First Interest" << std::endl;
+  
     NdnPacket snp ("/Osaka/weather", 0, "");
     std::stringstream sss;                         //送信するパケット用
     {
@@ -124,7 +150,12 @@ UdpNdn::Send (InetSocketAddress local)
     uint16_t packetSize = sss.str().length();
     Ptr<Packet>interestPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize+1);
     m_clientSocket->SendTo(interestPacket, 1, local);
-  //}
+}
+
+void 
+UdpNdn::HandleRead2 (Ptr<Socket> socket)
+{
+  std::cout << "ぶんぶん" << std::endl;
 }
 
 void 
@@ -144,6 +175,27 @@ UdpNdn::StopApplication ()
   }
 }
 
+/* 自分のipv4関連の情報をポインタ変数として取得*/
+void
+UdpNdn::SetMyIp (void)
+{  
+  Ptr<Node> node = this->GetNode(); //自分自身のポインタ変数(Nodeクラス)
+  m_device = node->GetDevice(0); //自分自身のポインタ変数(NetDeviceクラス)
+  std::cout << "私のマックアドレスは:" << m_device->GetAddress() << "です" << std::endl;
+  m_device->AddLinkChangeCallback(MakeCallback(&UdpNdn::Print, this));
+  m_ipv4 = node->GetObject<Ipv4> ();
+  m_l3 = m_ipv4->GetObject<Ipv4L3Protocol> ();
+  m_protocol = m_ipv4->GetRoutingProtocol ();
+  //m_arp = m_l3->GetInterface (1)->GetArpCache (); //自分自身のポインタ変数(ArpCacheクラス)
+  Ipv4InterfaceAddress iface = m_l3->GetAddress (1,0);
+  if (m_myAddress == Ipv4Address ())
+  {
+    m_myAddress = iface.GetLocal ();
+  }
+  m_memberList.insert(std::make_pair(m_name, m_myAddress));         //distance-vectorにて自身の名前を広報するためにも使用
+  
+}
+
 void 
 UdpNdn::HandleRead (Ptr<Socket> socket) //受信処理
 {
@@ -154,7 +206,6 @@ UdpNdn::HandleRead (Ptr<Socket> socket) //受信処理
   Address from;          //送信元IPアドレス
   Address localAddress;
   contents["/Osaka/weather"] = "Sunny";
-  std::cout << "okokokokokokok" << std::endl;
   while ((packet = socket->RecvFrom (from)))
   {
     uint8_t *buffer = new uint8_t[packet->GetSize()];
@@ -178,7 +229,7 @@ UdpNdn::HandleRead (Ptr<Socket> socket) //受信処理
             o_archive(snp);
         }      
         uint16_t packetSize = sss.str().length();
-        Ptr<Packet> dataPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize);
+        Ptr<Packet> dataPacket = Create<Packet>((uint8_t *)sss.str().c_str(), packetSize+1);
         socket->SendTo(dataPacket, 0, from);      //ソースとデスティネーションひっくり返して送る
       } 
     }
@@ -192,51 +243,24 @@ UdpNdn::HandleRead (Ptr<Socket> socket) //受信処理
     packet->RemoveAllPacketTags ();
     packet->RemoveAllByteTags ();
 
-#if 0 
-    NdnPacket np ("aaa", 1, "bbb");
-    std::cout << np.GetName() << std::endl; 
-
-    std::stringstream ss;
-    {
-        cereal::JSONOutputArchive o_archive(ss);
-        o_archive(np);
-    }
-    std::cout << ss.str() << std::endl;
-
-    NdnPacket np_i ("0", 0, "0");
-    cereal::JSONInputArchive i_archive(ss);
-    i_archive(np_i);
-
-    std::cout << np_i.GetName() << std::endl;
-
-    uint16_t packetSize = ss.str().length();
-    Ptr<Packet> packeto = Create<Packet>((uint8_t *)ss.str().c_str(), packetSize);
-    std::cout << from << std::endl;
-    socket->SendTo(packeto, 0, from);
-#endif 
-
-
-#if 0
-
-    //データがあれば
-    if(contents.count(s) != 0){
-      // dataSize = contents[s].size () + 1;
-      // delete [] data;
-      // data = new uint8_t [dataSize];
-
-      dataSize = s.size() + 1 + contents[s].size () + 1;
-      delete [] data;
-      data = new uint8_t [dataSize];
-      std::string payload = s + ":" + contents[s];
-      std:: cout << payload << std::endl;
-      memcpy (data, payload.c_str (), dataSize);
-      dataPacket = Create<Packet>(data, dataSize);
-      // socket->SendTo(dataPacket, 0, from); //送信部分(destination addressを指定)
-    } 
-    //Dataパケットを返信
-    //socket->SendTo (packet, 0, from); //送信部分(destination addressを指定
-  #endif
   }
 }
-
+void
+UdpNdn::Print(void)
+{
+  std::cout << "現在の時刻は" << Simulator::Now()  << "**************************************" << std::endl;
+  Ptr<Ipv4RoutingProtocol> protocol = m_ipv4->GetRoutingProtocol ();
+  Ptr<OutputStreamWrapper> osw = Create<OutputStreamWrapper> (&std::cout);
+  if(m_myAddress == Ipv4Address("10.0.0.1")){
+  //protocol->PrintRoutingTable(osw);
+  }
+  //m_arp->PrintArpCache(osw);
+  //m_arp->Flush();
+}
+void
+UdpNdn::RoutingPacketSend (void)
+{
+ m_periodicUpdateInterval = m_protocol->SetUp();
+ 
+}
 } // Namespace ns3

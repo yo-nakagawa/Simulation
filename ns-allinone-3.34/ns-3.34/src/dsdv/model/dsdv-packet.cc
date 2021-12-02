@@ -40,7 +40,8 @@ NS_OBJECT_ENSURE_REGISTERED (DsdvHeader);
 DsdvHeader::DsdvHeader (Ipv4Address dst, uint32_t hopCount, uint32_t dstSeqNo)
   : m_dst (dst),
     m_hopCount (hopCount),
-    m_dstSeqNo (dstSeqNo)
+    m_dstSeqNo (dstSeqNo),
+    m_add("abcd")
 {
 }
 
@@ -67,7 +68,7 @@ DsdvHeader::GetInstanceTypeId () const
 uint32_t
 DsdvHeader::GetSerializedSize () const
 {
-  return 12;
+  return 20;
 }
 
 void
@@ -76,7 +77,12 @@ DsdvHeader::Serialize (Buffer::Iterator i) const
   WriteTo (i, m_dst);
   i.WriteHtonU32 (m_hopCount);
   i.WriteHtonU32 (m_dstSeqNo);
-
+  //uint32_t a = strtoul(m_add.c_str(), NULL, 10);
+  //m_size = m_add.length();
+  
+  i.Write((uint8_t *)m_add.c_str(), 8);
+  
+  //i.WriteHtonU32 (a);               //
 }
 
 uint32_t
@@ -87,6 +93,9 @@ DsdvHeader::Deserialize (Buffer::Iterator start)
   ReadFrom (i, m_dst);
   m_hopCount = i.ReadNtohU32 ();
   m_dstSeqNo = i.ReadNtohU32 ();
+  uint8_t *buffer = new uint8_t[8];;
+  i.Read(buffer, 8);              //
+  m_add = std::string(buffer, buffer + 8);
 
   uint32_t dist = i.GetDistanceFrom (start);
   NS_ASSERT (dist == GetSerializedSize ());

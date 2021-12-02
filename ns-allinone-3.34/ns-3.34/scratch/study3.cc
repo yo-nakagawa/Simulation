@@ -1,7 +1,7 @@
 /* -*-  Mode: C++; nodes-file-style: "gnu"; indent-tabs-mode:nil; -*- */
 /*
 お試し
-adhoc(aodv) + randomwalk + + UDP(NDN)
+adhoc(dsdv) + randomwalk + + UDP(NDN)
 ndnアプリを全搭載
  */
 #include "ns3/core-module.h"
@@ -45,6 +45,8 @@ private:
   Ptr<Node> leaderNode;
   /// port number
   int portNum;
+  /// membername list
+  std::vector <std::string> memberList;
 
 private:
   void ReceivePacket (Ptr<Socket> socket);
@@ -68,6 +70,7 @@ private:
 
 Experiment::Experiment ()
 {
+  memberList = {"N1", "N2", "N3", "N4"};
 }
 
 Experiment::Experiment (std::string name)
@@ -130,12 +133,26 @@ void
 Experiment::CreateNodes ()
 {
 //ノードの作成
-  nodes.Create (2);
+  nodes.Create (3);
   leaderNode = nodes.Get (0);
   MobilityHelper mobility;
+  // mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
+  //                                "MinX", DoubleValue (25.0),
+  //                                "MinY", DoubleValue (25.0),
+  //                                "DeltaX", DoubleValue (10.0),
+  //                                "DeltaY", DoubleValue (10.0),
+  //                                "GridWidth", UintegerValue (2),
+  //                                "LayoutType", StringValue ("RowFirst"));
+
+  // mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
+  //                              "Time", StringValue ("2s"),
+  //                            "Speed", StringValue ("ns3::ConstantRandomVariable[Constant=3.0]"),
+  //                            "Bounds", RectangleValue (Rectangle (-100, 100, -100, 100)));
+  
   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
   positionAlloc->Add (Vector (0.0, 0.0, 0.0));
   positionAlloc->Add (Vector (5.0, 0.0, 0.0));
+  positionAlloc->Add (Vector (10.0, 0.0, 0.0));
   mobility.SetPositionAllocator (positionAlloc);
   mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
   mobility.Install (nodes);
@@ -152,7 +169,7 @@ Experiment::CreateDevices ()
   YansWifiChannelHelper wifiChannel;
   wifiChannel.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
   wifiChannel.AddPropagationLoss ("ns3::RangePropagationLossModel",
-                                  "MaxRange", DoubleValue (50.0)); //wifiの距離
+                                  "MaxRange", DoubleValue (6.0)); //wifiの距離 17
   wifiPhy.SetChannel (wifiChannel.Create ()); //チャネルの設定 (Createメソッドで新チャネルが返ってくる)
   WifiHelper wifi;
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager", "DataMode", StringValue ("OfdmRate6Mbps"), "RtsCtsThreshold", UintegerValue (0));
@@ -166,11 +183,12 @@ Experiment::InstallInternetStack ()
 {
   DsdvHelper dsdv;
   // you can configure dsdv attributes here using dsdv.Set(name, value)
+  dsdv.Set("PeriodicUpdateInterval", TimeValue(Seconds(2.0)));//dsdvのルーティングテーブルの広報間隔
   InternetStackHelper stack;
-  stack.SetRoutingHelper (dsdv); // has effect on the next Install ()
+  stack.SetRoutingHelper (dsdv); // has effect on the next Install () 
   stack.Install (nodes);
   Ipv4AddressHelper address; //IPv4の割当
-  address.SetBase ("10.0.0.0", "255.0.0.0");
+  address.SetBase ("10.0.0.0", "255.0.0.0"); 
   interfaces = address.Assign (devices);
 }
 
@@ -183,13 +201,13 @@ Experiment::InstallApplications ()
   ApplicationContainer apps;
   for (int i = 0; i < nNodes ; ++i)
   {
-    UdpNdnHelper UdpNdn (portNum,interfaces.GetAddress (i));
+    UdpNdnHelper UdpNdn (portNum, memberList[i]);
     apps.Add (UdpNdn.Install (nodes.Get(i)));
   }
   
   //ApplicationContainer apps = UdpNdn.Install (nodes);
   apps.Start (Seconds (3.0));
-  apps.Stop (Seconds (8.0));  
+  apps.Stop (Seconds (18.0));  
 
 }
 
@@ -204,8 +222,8 @@ Experiment::Run ()
   CreateDevices();
   InstallInternetStack();
   InstallApplications();
-
-  Simulator::Stop(Seconds (10.0));
+  
+  Simulator::Stop(Seconds (20.0));
   AnimationInterface anim (animFile);
   Simulator::Run ();
 

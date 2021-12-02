@@ -298,6 +298,7 @@ RoutingProtocol::RouteOutput (Ptr<Packet> p,
     }
   if (!removedAddresses.empty ())
     {
+      std::cout << "経路を削除しました" << std::endl;
       Simulator::Schedule (MicroSeconds (m_uniformRandomVariable->GetInteger (0,1000)),&RoutingProtocol::SendTriggeredUpdate,this);
     }
   if (m_routingTable.LookupRoute (dst,rt))
@@ -555,6 +556,7 @@ RoutingProtocol::LoopbackRoute (const Ipv4Header & hdr, Ptr<NetDevice> oif) cons
 void
 RoutingProtocol::RecvDsdv (Ptr<Socket> socket)
 {
+  
   Address sourceAddress;
   Ptr<Packet> advpacket = Create<Packet> ();
   Ptr<Packet> packet = socket->RecvFrom (sourceAddress);
@@ -566,12 +568,18 @@ RoutingProtocol::RecvDsdv (Ptr<Socket> socket)
   NS_LOG_FUNCTION (m_mainAddress << " received dsdv packet of size: " << packetSize
                                  << " and packet id: " << packet->GetUid ());
   uint32_t count = 0;
-  for (; packetSize > 0; packetSize = packetSize - 12)
+  
+  for (; packetSize > 0; packetSize = packetSize - 20)
     {
       count = 0;
       DsdvHeader dsdvHeader, tempDsdvHeader;
       packet->RemoveHeader (dsdvHeader);
       NS_LOG_DEBUG ("Processing new update for " << dsdvHeader.GetDst ());
+      if(m_ipv4->GetObject<Ipv4L3Protocol> ()->GetAddress (1,0).GetLocal () == Ipv4Address("10.0.0.1")){
+      if(dsdvHeader.GetAdd() == "abcd"){
+        std::cout << "Destionationは//////////////"<< dsdvHeader.GetAdd() << std::endl;
+      }
+      }
       /*Verifying if the packets sent by me were returned back to me. If yes, discarding them!*/
       for (std::map<Ptr<Socket>, Ipv4InterfaceAddress>::const_iterator j = m_socketAddresses.begin (); j
            != m_socketAddresses.end (); ++j)
@@ -795,7 +803,7 @@ RoutingProtocol::RecvDsdv (Ptr<Socket> socket)
     }
 }
 
-
+/****              経路の更新があったときに、周囲に自身の経路表をアドバタイズ          ***/
 void
 RoutingProtocol::SendTriggeredUpdate ()
 {
@@ -881,6 +889,9 @@ RoutingProtocol::SendPeriodicUpdate ()
     {
       return;
     }
+  if(m_mainAddress == Ipv4Address("10.0.0.2")) {
+    m_routingTable.Print(Create<OutputStreamWrapper> (&std::cout));
+  }
   NS_LOG_FUNCTION (m_mainAddress << " is sending out its periodic update");
   for (std::map<Ptr<Socket>, Ipv4InterfaceAddress>::const_iterator j = m_socketAddresses.begin (); j
        != m_socketAddresses.end (); ++j)
@@ -891,7 +902,7 @@ RoutingProtocol::SendPeriodicUpdate ()
       for (std::map<Ipv4Address, RoutingTableEntry>::const_iterator i = allRoutes.begin (); i != allRoutes.end (); ++i)
         {
           DsdvHeader dsdvHeader;
-          if (i->second.GetHop () == 0)
+          if (i->second.GetHop () == 0)                                             //自分自身へのディスタンスベクタ
             {
               RoutingTableEntry ownEntry;
               dsdvHeader.SetDst (m_ipv4->GetAddress (1,0).GetLocal ());
@@ -909,6 +920,10 @@ RoutingProtocol::SendPeriodicUpdate ()
               dsdvHeader.SetHopCount (i->second.GetHop () + 1);
               packet->AddHeader (dsdvHeader);
             }
+          if(m_mainAddress == Ipv4Address("10.0.0.2")) {
+            dsdvHeader.Print(std::cout);
+            std::cout << std::endl;
+          }
           NS_LOG_DEBUG ("Forwarding the update for " << i->first);
           NS_LOG_DEBUG ("Forwarding details are, Destination: " << dsdvHeader.GetDst ()
                                                                 << ", SeqNo:" << dsdvHeader.GetDstSeqno ()
@@ -927,7 +942,7 @@ RoutingProtocol::SendPeriodicUpdate ()
                                                                       << " SeqNo:" << removedHeader.GetDstSeqno ()
                                                                       << " HopCount:" << removedHeader.GetHopCount ());
         }
-      socket->Send (packet);
+      socket->Send (packet);                                                                                                         //関係なさそう
       // Send to all-hosts broadcast if on /32 addr, subnet-directed otherwise
       Ipv4Address destination;
       if (iface.GetMask () == Ipv4Mask::GetOnes ())
@@ -938,7 +953,7 @@ RoutingProtocol::SendPeriodicUpdate ()
         {
           destination = iface.GetBroadcast ();
         }
-      socket->SendTo (packet, 0, InetSocketAddress (destination, DSDV_PORT));
+      socket->SendTo (packet, 0, InetSocketAddress (destination, DSDV_PORT));                                                                                   //broadcast
       NS_LOG_FUNCTION ("PeriodicUpdate Packet UID is : " << packet->GetUid ());
     }
   m_periodicUpdateTimer.Schedule (m_periodicUpdateInterval + MicroSeconds (25 * m_uniformRandomVariable->GetInteger (0,1000)));
@@ -1207,12 +1222,24 @@ RoutingProtocol::GetSettlingTime (Ipv4Address address)
   return mainrt.GetSettlingTime ();
 }
 
+/****        受信した経路表を自身の経路表にマージ            ****/
 void
-RoutingProtocol::MergeTriggerPeriodicUpdates ()
+RoutingProtocol::MergeTriggerPeriodicUpdates ()                   
 {
   NS_LOG_FUNCTION ("Merging advertised table changes with main table before sending out periodic update");
   std::map<Ipv4Address, RoutingTableEntry> allRoutes;
   m_advRoutingTable.GetListOfAllRoutes (allRoutes);
+
+  /***    routing table表示 自作        ****/
+  #if 0
+  m_routingTable.GetListOfAllRoutes (allRoutes);
+  for (std::map<Ipv4Address, RoutingTableEntry>::const_iterator i = allRoutes.begin (); i != allRoutes.end (); ++i)
+  {
+    std::cout << Simulator::Now () << i->first << i->second.getaa() << std::endl;
+  }
+  #endif
+  /***       routing table表示 自作      ***/
+
   if (allRoutes.size () > 0)
     {
       for (std::map<Ipv4Address, RoutingTableEntry>::const_iterator i = allRoutes.begin (); i != allRoutes.end (); ++i)
@@ -1235,6 +1262,12 @@ RoutingProtocol::MergeTriggerPeriodicUpdates ()
             }
         }
     }
+}
+Time
+RoutingProtocol::SetUp (void){
+  std::cout << "setup" << std::endl;
+  //SendPeriodicUpdate ();
+  return m_periodicUpdateInterval;
 }
 }
 }

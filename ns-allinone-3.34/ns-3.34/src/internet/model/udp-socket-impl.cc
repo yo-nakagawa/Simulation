@@ -603,14 +603,15 @@ UdpSocketImpl::DoSendTo (Ptr<Packet> p, Ipv4Address dest, uint16_t port, uint8_t
     }
   else if (m_endPoint->GetLocalAddress () != Ipv4Address::GetAny ())
     {
+
       m_udp->Send (p->Copy (), m_endPoint->GetLocalAddress (), dest,
                    m_endPoint->GetLocalPort (), port, 0);
       NotifyDataSent (p->GetSize ());
       NotifySend (GetTxAvailable ());
       return p->GetSize ();
     }
-  else if (ipv4->GetRoutingProtocol () != 0)
-    {
+  else if (ipv4->GetRoutingProtocol () != 0)                                      /// ルーティングプロトコルを適用しているのであれば。。
+    {      
       Ipv4Header header;
       header.SetDestination (dest);
       header.SetProtocol (UdpL4Protocol::PROT_NUMBER);
@@ -619,10 +620,10 @@ UdpSocketImpl::DoSendTo (Ptr<Packet> p, Ipv4Address dest, uint16_t port, uint8_t
       Ptr<NetDevice> oif = m_boundnetdevice; //specify non-zero if bound to a specific device
       // TBD-- we could cache the route and just check its validity
       route = ipv4->GetRoutingProtocol ()->RouteOutput (p, header, oif, errno_); 
-      if (route != 0)
+      if (route != 0)                                                               /// 経路表に、指定宛先への経路が存在するならば。。。
         {
           NS_LOG_LOGIC ("Route exists");
-          if (!m_allowBroadcast)
+          if (!m_allowBroadcast)                                                    /// broadcastアドレスでないならば。。。
             {
               // Here we try to route subnet-directed broadcasts
               uint32_t outputIfIndex = ipv4->GetInterfaceForDevice (route->GetOutputDevice ());
@@ -641,7 +642,8 @@ UdpSocketImpl::DoSendTo (Ptr<Packet> p, Ipv4Address dest, uint16_t port, uint8_t
           header.SetSource (route->GetSource ());
           m_udp->Send (p->Copy (), header.GetSource (), header.GetDestination (),
                        m_endPoint->GetLocalPort (), port, route);
-          NotifyDataSent (p->GetSize ());
+                       
+          NotifyDataSent (p->GetSize ()); 
           return p->GetSize ();
         }
       else 

@@ -952,6 +952,7 @@ WifiRemoteStationManager::NeedRts (const WifiMacHeader &header, uint32_t size)
     {
       return false;
     }
+  
   if (m_erpProtectionMode == RTS_CTS
       && ((mode.GetModulationClass () == WIFI_MOD_CLASS_ERP_OFDM)
           || (mode.GetModulationClass () == WIFI_MOD_CLASS_HT)

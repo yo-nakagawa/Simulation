@@ -55,7 +55,6 @@ WifiMacHelper::Create (Ptr<NetDevice> device, WifiStandard standard) const
 
   Ptr<RegularWifiMac> wifiMac = DynamicCast<RegularWifiMac> (mac);
   Ptr<FrameExchangeManager> fem;
-
   if (wifiMac != 0 && (fem = wifiMac->GetFrameExchangeManager ()) != 0)
     {
       Ptr<WifiProtectionManager> protectionManager = m_protectionManager.Create<WifiProtectionManager> ();

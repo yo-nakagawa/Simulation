@@ -1,0 +1,200 @@
+Waf: Entering directory `/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build'
+Waf: Leaving directory `/home/nuc1/Simulation/ns-allinone-3.34/ns-3.34/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.235s)
+X: 10.255.255.255
+X: 10.255.255.255
+X: 10.255.255.255
+X: 10.255.255.255
+X: 10.255.255.255
+私のマックアドレスは:03-06-00:00:00:00:00:01です
+10.0.0.1
+私のマックアドレスは:03-06-00:00:00:00:00:02です
+10.0.0.2
+Send First Interest
+X: 10.0.0.1
+Send First Interest
+X: 10.0.0.1
+aaa+
+aaa+
+{
+    "value0": {
+        "m_name": "/Osaka/weather",
+        "m_typeId": 0,
+        "m_content": ""
+    }
+}
+Received Interest: name = /Osaka/weather
+X: 10.0.0.2
+aaa+
+aaa+
+{
+    "value0": {
+        "m_name": "/Osaka/weather",
+        "m_typeId": 1,
+        "m_content": "Sunny"
+    }
+}
+Received Data:Sunny
+X: 10.255.255.255
+X: 10.255.255.255
+X: 10.255.255.255
++5e+09ns
+Now LINK is1
++5e+09ns
+Now LINK is1
+X: 10.255.255.255
+X: 10.255.255.255
++7e+09ns
+Now LINK is1
++7e+09ns
+Now LINK is1
+Send First Interest
+X: 10.0.0.1
+Send First Interest
+X: 10.0.0.1
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+X: 10.255.255.255
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+X: 10.255.255.255
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
+aaa+
++9e+09ns
+Now LINK is1
++9e+09ns
+Now LINK is1
+X: 10.255.255.255
+X: 10.255.255.255
++1.1e+10ns
+Now LINK is1
++1.1e+10ns
+Now LINK is1
+X: 10.255.255.255
+X: 10.255.255.255
++1.3e+10ns
+Now LINK is1
++1.3e+10ns
+Now LINK is1
+Destination : 10.0.0.2 is deleted!
+X: 10.255.255.255
+Destination : 10.0.0.1 is deleted!
+X: 10.255.255.255
++1.5e+10ns
+Now LINK is1
++1.5e+10ns
+Now LINK is1
+X: 10.255.255.255
+X: 10.255.255.255
++1.7e+10ns
+Now LINK is1
++1.7e+10ns
+Now LINK is1
+X: 10.255.255.255
+X: 10.255.255.255
++1.9e+10ns
+Now LINK is1
++1.9e+10ns
+Now LINK is1

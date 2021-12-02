@@ -18,17 +18,20 @@
  * Author: Mathieu Lacage <mathieu.lacage@sophia.inria.fr>
  */
 #include "udp-ndn-helper.h"
+#include "ns3/ipv4.h"
+#include "ns3/ipv4-l3-protocol.h"
 #include "ns3/udp-ndn.h"
 #include "ns3/uinteger.h"
+#include "ns3/string.h"
 #include "ns3/names.h"
 
 namespace ns3 {
 
-UdpNdnHelper::UdpNdnHelper (uint16_t port, Address address)
+UdpNdnHelper::UdpNdnHelper (uint16_t port, std::string name)
 {
   m_factory.SetTypeId (UdpNdn::GetTypeId ());
   SetAttribute ("Port", UintegerValue (port));
-  SetAttribute ("MyAddress", AddressValue (address));
+  SetAttribute ("Name", StringValue (name));
 }
 
 void 

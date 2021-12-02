@@ -25,7 +25,10 @@
 #include "ns3/address.h"
 #include "ns3/traced-callback.h"
 #include "ns3/inet-socket-address.h"
-#include <map>
+#include "ns3/ipv4.h" 
+#include "ns3/ipv4-address.h"
+#include "ns3/arp-cache.h"
+#include "ns3/ipv4-l3-protocol.h"
 
 namespace ns3 {
 
@@ -72,12 +75,23 @@ private:
   void Send(InetSocketAddress local);
   void HandleRead (Ptr<Socket> socket);
   void HandleRead2 (Ptr<Socket> socket);
+  void SetMyIp (void);
+  void Print (void);
 
   uint16_t m_port; //!< Port on which we listen for incoming packets.
+  std::string m_name; //自分のノード名
+  std::map <std::string, Ipv4Address> m_memberList; //シナリオから与えた・・・☓、dsdvを通して知った・・・o {ノード名、そのノードのIPアドレスのリスト}
   Ptr<Socket> m_serverSocket; //!< IPv4 Socket
   Ptr<Socket> m_clientSocket;
+  Ptr<Socket> m_routingSocket;
   Address m_local; //!< local multicast address
-  Address m_myAddress;
+  Ipv4Address m_myAddress;
+  Ptr<Ipv4> m_ipv4;
+  Ptr<Node> m_node;
+  Ptr<NetDevice> m_device;
+  Ptr<Ipv4L3Protocol> m_l3;
+  Ptr<Ipv4RoutingProtocol> m_protocol;
+  //Ptr<ArpCache> m_arp;
 
   /// Callbacks for tracing the packet Rx events
   TracedCallback<Ptr<const Packet> > m_rxTrace;
@@ -85,7 +99,7 @@ private:
   /// Callbacks for tracing the packet Rx events, includes source and destination addresses
   TracedCallback<Ptr<const Packet>, const Address &, const Address &> m_rxTraceWithAddresses;
   /// 保持するコンテンツ
-  std::map<std::string, std::string> contents;
+  std::map <std::string, std::string> contents;
 };
 
 } // namespace ns3

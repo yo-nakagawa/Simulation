@@ -71,9 +71,9 @@ WifiDefaultProtectionManager::TryAddMpdu (Ptr<const WifiMacQueueItem> mpdu,
   NS_ASSERT (!txParams.m_protection || txParams.m_protection->method == WifiProtection::NONE);
 
   std::unique_ptr<WifiProtection> protection;
+  
   protection = GetPsduProtection (mpdu->GetHeader (), txParams.GetSizeIfAddMpdu (mpdu),
                                   txParams.m_txVector);
-
   // return the newly computed method if none was set or it is not NONE
   if (!txParams.m_protection || protection->method != WifiProtection::NONE)
     {
@@ -101,6 +101,7 @@ WifiDefaultProtectionManager::TryAggregateMsdu (Ptr<const WifiMacQueueItem> msdu
   NS_ASSERT (txParams.m_protection->method == WifiProtection::NONE);
 
   std::unique_ptr<WifiProtection> protection;
+
   protection = GetPsduProtection (msdu->GetHeader (), txParams.GetSizeIfAggregateMsdu (msdu).second,
                                   txParams.m_txVector);
 
@@ -123,6 +124,7 @@ WifiDefaultProtectionManager::GetPsduProtection (const WifiMacHeader& hdr, uint3
   // a non-initial fragment does not need to be protected, unless it is being retransmitted
   if (hdr.GetFragmentNumber () > 0 && !hdr.IsRetry ())
     {
+      
       return std::unique_ptr<WifiProtection> (new WifiNoProtection ());
     }
 
@@ -132,7 +134,7 @@ WifiDefaultProtectionManager::GetPsduProtection (const WifiMacHeader& hdr, uint3
       WifiRtsCtsProtection* protection = new WifiRtsCtsProtection;
       protection->rtsTxVector = m_mac->GetWifiRemoteStationManager ()->GetRtsTxVector (hdr.GetAddr1 ());
       protection->ctsTxVector = m_mac->GetWifiRemoteStationManager ()->GetCtsTxVector (hdr.GetAddr1 (),
-                                                                                       protection->rtsTxVector.GetMode ());
+                                                                                       protection->rtsTxVector.GetMode ());                                                                                
       return std::unique_ptr<WifiProtection> (protection);
     }
 
@@ -144,7 +146,6 @@ WifiDefaultProtectionManager::GetPsduProtection (const WifiMacHeader& hdr, uint3
       protection->ctsTxVector = m_mac->GetWifiRemoteStationManager ()->GetCtsToSelfTxVector ();
       return std::unique_ptr<WifiProtection> (protection);
     }
-
   return std::unique_ptr<WifiProtection> (new WifiNoProtection ());
 }
 
